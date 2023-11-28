@@ -8,7 +8,7 @@ public class Weapon : Sound
     [SerializeField] protected Transform transformPoint;
     [SerializeField] protected Player player;
     [SerializeField] protected float startTime;
-
+    [SerializeField] protected float KSpeedPlayer=1;
     protected SpriteRenderer spriteRenderer;
 
     protected float time;
@@ -27,10 +27,11 @@ public class Weapon : Sound
 
     protected virtual void Update()
     {
+        if (gameObject.activeSelf) player.KSpeedFromWeapon = KSpeedPlayer;
         if (Time.timeScale != 0)
         {
             MakeRotation();
-            Shoot();
+            Shot();
         }
     }
 
@@ -64,13 +65,13 @@ public class Weapon : Sound
         WeaponFire.SetActive(false);
     }
 
-    protected virtual void Shoot()
+    protected virtual void Shot()
     {
         if (time <= 0)
         {
             if(Input.GetMouseButton(0))
             {
-                PlaySound(0,0.15f,0.7f,1f);
+                PlaySound(0,0.06f);
                 WeaponFire.SetActive(true);
                 Invoke("DisanabledWeaponFire", 0.1f);
                 var bulletTmp=Instantiate(bullet,transformPoint.position,transform.rotation);

@@ -165,16 +165,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - soundArray:
-    - {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
-    - {fileID: 8300000, guid: 4d6281aa604094f04839cffa502096c0, type: 3}
-    - {fileID: 8300000, guid: 0dbe91efb8ee94e6695ef0f552d202ce, type: 3}
-    - {fileID: 8300000, guid: b33e2cff5225f4437a43a11d35763d46, type: 3}
+    - {fileID: 8300000, guid: 042c756a84d67df4cad8888d0cfa2513, type: 3}
   camera: {fileID: 0}
   bullet: {fileID: 3042299607576206525, guid: 70e1c0c367036824fa613371c4ae841d, type: 3}
   WeaponFire: {fileID: 6808193433272315757}
   transformPoint: {fileID: 2694326587921330381}
   player: {fileID: 0}
   startTime: 0.12
+  KSpeedPlayer: 0.9
 --- !u!82 &1464153586385389813
 AudioSource:
   m_ObjectHideFlags: 0

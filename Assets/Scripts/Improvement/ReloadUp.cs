@@ -3,12 +3,13 @@ using UnityEngine;
 public class ReloadUp : MonoBehaviour
 {
     [SerializeField] private Player player;
+    [SerializeField] private float k;
 
     private void Update()
     {
         if (gameObject.activeSelf)
         {
-            player.KReload *= 1.1f;
+            player.KReload += k / 100;
             gameObject.SetActive(false);
         }
     }

@@ -172,6 +172,7 @@ MonoBehaviour:
   transformPoint: {fileID: 3740623050002282066}
   player: {fileID: 0}
   startTime: 2
+  KSpeedPlayer: 1.05
   countBullets: 16
   accuracy: 2
 --- !u!82 &7234592473290866617

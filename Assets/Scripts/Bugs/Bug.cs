@@ -72,11 +72,14 @@ public abstract class Bug : Entity
 
     protected void DistanceToPlayer()
     {
-        if (timeSearchPlayer > 0) timeSearchPlayer -= Time.deltaTime;
-        if (timeSearchPlayer <= 0)
+        if (player != null)
         {
-            playerPosition = player.transform.position;
-            timeSearchPlayer = startTimeSearchPlayer;
+            if (timeSearchPlayer > 0) timeSearchPlayer -= Time.deltaTime;
+            if (timeSearchPlayer <= 0)
+            {
+                playerPosition = player.transform.position;
+                timeSearchPlayer = startTimeSearchPlayer;
+            }
         }
     }
 

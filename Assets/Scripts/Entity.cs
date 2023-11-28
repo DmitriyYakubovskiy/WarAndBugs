@@ -107,7 +107,7 @@ public class Entity : Sound
         else transform.eulerAngles = new Vector2(0, 0);
     }
 
-    protected void Move(bool b)
+    protected virtual void Move(bool b)
     {
         if (moveVector.x < 0 && b==false) SetFlip(true);
         else if (moveVector.x > 0 && b == false) SetFlip(false);

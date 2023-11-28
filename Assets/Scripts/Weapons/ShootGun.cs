@@ -5,7 +5,7 @@ public class ShootGun : Weapon
     [SerializeField] private int countBullets;
     [SerializeField] protected float accuracy;
 
-    protected override void Shoot()
+    protected override void Shot()
     {
         if (time <= 0)
         {

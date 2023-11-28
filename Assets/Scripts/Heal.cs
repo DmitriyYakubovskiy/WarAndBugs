@@ -7,7 +7,7 @@ public class Heal : MonoBehaviour
         if (collision.tag=="Player")
         {
             var entity = collision.gameObject.GetComponent<Entity>();
-            entity.Lives+=entity.hp.GetComponent<HealthBar>().MaxHealth / 2;
+            entity.Lives+=entity.hp.GetComponent<HealthBar>().MaxHealth / 4;
             Destroy(gameObject);
         }
     }

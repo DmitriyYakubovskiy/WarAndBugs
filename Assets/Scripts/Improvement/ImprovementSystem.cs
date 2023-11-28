@@ -16,10 +16,10 @@ public class ImprovementSystem : MonoBehaviour
 
     private void Update()
     {
-        if (panel.activeSelf && check!=true)
+        if (panel.activeSelf) pause.PauseGame();
+        if (panel.activeSelf && check != true)
         {
             check = true;
-            pause.PauseGame();
             System.Random random = new System.Random();
             for (int i = 0; i < buttons.Length; i++)
             {
@@ -45,7 +45,7 @@ public class ImprovementSystem : MonoBehaviour
                 for (int i = 0; i < indexes.Length; i++)
                 {
                     buttonsGuns[indexes[i]].SetActive(true);
-                    buttonsGuns[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 120 - 120 * i, 0);
+                    buttonsGuns[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
                 }
             }
             else
@@ -64,7 +64,7 @@ public class ImprovementSystem : MonoBehaviour
                 for (int i = 0; i < indexes.Length; i++)
                 {
                     buttons[indexes[i]].SetActive(true);
-                    buttons[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0,120-120*i,0);
+                    buttons[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
                 }
             }
         }

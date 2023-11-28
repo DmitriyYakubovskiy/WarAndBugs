@@ -22,7 +22,7 @@ public class SpawnSystem : MonoBehaviour
         timeLeft += Time.deltaTime;
         if (Mathf.FloorToInt(timeLeft / 30)==1)
         {
-            startTime *= 0.96f;
+            startTime *= 0.95f;
             SpawnEntity(aiEntity[0]);
             timeLeft = 0;
         }
@@ -52,19 +52,16 @@ public class SpawnSystem : MonoBehaviour
         if (value % 10 == 0 && aiEntity.Length >= 5 && player.Level > 10)
         {
             gameObject = aiEntity[4];
-            SpawnEntity(aiEntity[0]);
             count += 6;
         }
         else if (value % 7 == 0 && aiEntity.Length >= 4 && player.Level > 8)
         {
             gameObject = aiEntity[3];
-            SpawnEntity(aiEntity[0]);
             count += 5;
         }
-        else if (value % 6 == 0 && aiEntity.Length >= 3 && player.Level > 5)
+        else if (value % 7 == 0 && aiEntity.Length >= 3 && player.Level > 5)
         {
             gameObject = aiEntity[2];
-            SpawnEntity(aiEntity[0]);
             count += 4;
         }
         else
@@ -77,7 +74,8 @@ public class SpawnSystem : MonoBehaviour
 
     private bool DoteInScreen(Vector2 vector)
     {
-        Rect rect = new Rect(player.transform.position.x-16, player.transform.position.y-10,33,20);
+        Vector2 playerPosition = player == null ? new Vector2(0, 0) : player.transform.position;
+        Rect rect = new Rect(playerPosition.x-16, playerPosition.y-10,33,20);
         if (rect.Contains(vector)) return true;
         return false;
     }
@@ -85,7 +83,7 @@ public class SpawnSystem : MonoBehaviour
     private void SpawnEntity(GameObject gameObject)
     {
         System.Random rand = new System.Random();
-        Vector2 playerPosition=player.transform.position;
+        Vector2 playerPosition = player==null? new Vector2(0,0): player.transform.position;
         int positionX = rand.Next((int)playerPosition.x - range, (int)playerPosition.x + range);
         int positionY = rand.Next((int)playerPosition.y - range, (int)playerPosition.y + range);
 
