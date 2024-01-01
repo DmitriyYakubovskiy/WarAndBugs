@@ -60,7 +60,7 @@ public class Entity : Sound
         materialDefault = spriteRenderer.material;
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         if (lives <= 0) return;
         lives -= damage;

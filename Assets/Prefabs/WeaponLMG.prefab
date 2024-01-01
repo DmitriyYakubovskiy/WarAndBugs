@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - soundArray:
-    - {fileID: 8300000, guid: 042c756a84d67df4cad8888d0cfa2513, type: 3}
+    - {fileID: 8300000, guid: 4b7114920335c57439dfc60b39b98b1c, type: 3}
   camera: {fileID: 0}
   bullet: {fileID: 3042299607576206525, guid: 70e1c0c367036824fa613371c4ae841d, type: 3}
   WeaponFire: {fileID: 6808193433272315757}

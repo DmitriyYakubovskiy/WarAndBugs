@@ -158,9 +158,10 @@ MonoBehaviour:
   - soundArray:
     - {fileID: 8300000, guid: 257e23b6794f8ac419561c64a1e146a8, type: 3}
   hp: {fileID: 1544720368031926825}
-  speed: 3
+  speed: 2.5
   lives: 17
   timeDeadAnimation: 1.4
+  expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
   exp: 15
   damage: 10
   startTimeAttack: 0.6

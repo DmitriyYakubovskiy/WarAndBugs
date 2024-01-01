@@ -55,7 +55,10 @@ public class Player : Entity
 
     private void FixedUpdate()
     {
-        if (moveVector.y == 0 && moveVector.x == 0) State = States.Idle;
+        if (moveVector.y == 0 && moveVector.x == 0)
+        {
+            State = States.Idle;
+        }
         else
         {
             SpeedCalculation();
@@ -82,7 +85,6 @@ public class Player : Entity
     {
         resultPanel.levelText.text = "Level: " + Level;
         resultPanel.killsText.text = "Kills: " + Kills;
-        diePanel.SetActive(true);
-        //SceneManager.LoadScene(0);
+        if(diePanel != null) diePanel.SetActive(true);
     }
 }

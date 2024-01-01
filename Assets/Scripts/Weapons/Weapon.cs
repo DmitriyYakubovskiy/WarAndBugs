@@ -71,7 +71,7 @@ public class Weapon : Sound
         {
             if(Input.GetMouseButton(0))
             {
-                PlaySound(0,0.06f);
+                PlaySound(0,0.2f);
                 WeaponFire.SetActive(true);
                 Invoke("DisanabledWeaponFire", 0.1f);
                 var bulletTmp=Instantiate(bullet,transformPoint.position,transform.rotation);

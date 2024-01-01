@@ -16,10 +16,7 @@ public class Bullet : MonoBehaviour
     protected virtual void Update()
     {
         Move();
-        if(timeDieBullet < 0)
-        {
-            Destroy(gameObject);
-        }
+        if(timeDieBullet <= 0) Destroy(gameObject);
         timeDieBullet-= Time.deltaTime;
     }
 

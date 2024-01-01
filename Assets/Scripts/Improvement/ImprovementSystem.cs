@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ImprovementSystem : MonoBehaviour
+public class ImprovementSystem : Sound
 {
     [SerializeField] private GameObject[] gameObjects;
     [SerializeField] private GameObject[] guns;
@@ -16,9 +15,13 @@ public class ImprovementSystem : MonoBehaviour
 
     private void Update()
     {
-        if (panel.activeSelf) pause.PauseGame();
+        if (panel.activeSelf)
+        {
+            pause.PauseGame();
+        }
         if (panel.activeSelf && check != true)
         {
+            PlaySound(0,2);
             check = true;
             System.Random random = new System.Random();
             for (int i = 0; i < buttons.Length; i++)

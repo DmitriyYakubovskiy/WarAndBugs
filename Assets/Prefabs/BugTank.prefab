@@ -264,7 +264,8 @@ MonoBehaviour:
   speed: 1.2
   lives: 140
   timeDeadAnimation: 2
-  exp: 120
+  expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
+  exp: 240
   damage: 60
   startTimeAttack: 1.1
   timeAttackAnimation: 1.1

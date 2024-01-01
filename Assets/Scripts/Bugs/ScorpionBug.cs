@@ -44,12 +44,15 @@ public class ScorpionBug : Bug
                 timeAttack = startTimeAttack + timeAttackAnimation - 0.25f;
             }
         }
-    }   
+    }
 
     protected virtual void MakeRotation()
     {
-        var dir = player.transform.position - transformPoint.transform.position;
-        float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transformPoint.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+        if (player != null)
+        {
+            var dir = player.transform.position - transformPoint.transform.position;
+            float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transformPoint.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+        }
     }
 }

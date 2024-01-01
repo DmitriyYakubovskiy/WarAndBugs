@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class Bug : Entity
 {
+    [SerializeField] protected GameObject expGameObject;
     [SerializeField] protected int exp;
     [SerializeField] protected float damage;
     [SerializeField] protected float startTimeAttack;
@@ -70,6 +71,37 @@ public abstract class Bug : Entity
         previousPosition = rigidbody.position;
     }
 
+    public override void TakeDamage(float damage)
+    {
+        if (lives <= 0) return;
+        lives -= damage;
+        spriteRenderer.material = materialDamage;
+
+        if (lives <= 0)
+        {
+            lives = 0;
+            isDead = true;
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            ResetDamageMaterial();
+            PlaySound(2);
+            int value = Random.Range(1, 4);
+            for (int i = 0; i < value; i++)
+            {
+                Vector3 postion = new Vector3();
+                postion.x = Random.Range(-3, 4) / 10f;
+                postion.y = Random.Range(-3, 4) / 10f;
+                postion.z = 0;
+                var buf = Instantiate(expGameObject, transform.position + postion, transform.rotation);
+                buf.GetComponent<Exp>().exp = exp / value;
+            }
+        }
+        else
+        {
+            PlaySound(1);
+            Invoke("ResetDamageMaterial", 0.1f);
+        }
+    }
+
     protected void DistanceToPlayer()
     {
         if (player != null)
@@ -130,16 +162,12 @@ public abstract class Bug : Entity
         }
     }
 
-    //protected virtual void SpeedCalculation()
-    //{
-    //    double v = Math.Sqrt(Math.Pow(rigidbody.position.x - previousPosition.x,2) + Math.Pow(rigidbody.position.y - previousPosition.y, 2));
-    //    var k = Math.Abs(v / (speed * Time.deltaTime));
-    //    Animator.speed = (float)k;
-    //}
-
     protected virtual void RechargeTimeAttack()
     {
-        if (timeAttack > 0) timeAttack -= Time.deltaTime;
+        if (timeAttack > 0)
+        {
+            timeAttack -= Time.deltaTime;
+        }
         else
         {
             randomMoveTime = 0;
@@ -162,33 +190,23 @@ public abstract class Bug : Entity
     public virtual void GetDamage()
     {
         PlaySound(0);
-        if (playerForAttack != null)
-        {   
-            playerForAttack.GetComponent<Player>().TakeDamage(damage);
-        }
+        if (playerForAttack != null) playerForAttack.GetComponent<Player>().TakeDamage(damage);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            playerForAttack = collision.gameObject;
-        }
+        if (collision.gameObject.tag == "Player" && collision.isTrigger == false) playerForAttack = collision.gameObject;
     }
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            playerForAttack = null;
-        }
+        if (collision.gameObject.tag == "Player" && collision.isTrigger==false) playerForAttack = null;
     }
 
     protected virtual void OnDestroy()
     {
         if (player != null)
         {
-            player.GetComponent<Player>().Exp+=exp;
             player.GetComponent<Player>().Kills++;
         }
     }
