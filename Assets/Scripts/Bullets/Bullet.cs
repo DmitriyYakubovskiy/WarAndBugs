@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected GameObject bloodSplash;
     [SerializeField] protected string[] tags;
 
-    protected float timeDieBullet=4;
+    protected float timeDieBullet=2;
     
     public float speed;
     public float damage;

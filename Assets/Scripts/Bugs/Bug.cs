@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class Bug : Entity
 {
     [SerializeField] protected GameObject expGameObject;
+    [SerializeField] protected int money;
     [SerializeField] protected int exp;
     [SerializeField] protected float damage;
     [SerializeField] protected float startTimeAttack;
@@ -208,6 +209,7 @@ public abstract class Bug : Entity
         if (player != null)
         {
             player.GetComponent<Player>().Kills++;
+            player.GetComponent<Player>().Money += money;
         }
     }
 }

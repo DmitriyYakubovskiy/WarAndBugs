@@ -40,10 +40,10 @@ public class SpawnSystem : MonoBehaviour
     private void ChooseRandomEntity()
     {
         GameObject gameObject;
-        int value = UnityEngine.Random.Range(0, 100);
-        if (value % 11 == 0 && aiEntity.Length >= 5 && player.Level > 10) gameObject = aiEntity[4];
-        else if (value % 9 == 0 && aiEntity.Length >= 3 && player.Level > 5) gameObject = aiEntity[2];
-        else if (value % 8 == 0 && aiEntity.Length >= 4 && player.Level > 8) gameObject = aiEntity[3];
+        int value = UnityEngine.Random.Range(0, 101);
+        if (value > 99 && aiEntity.Length >= 3 && player.Level > 5) gameObject = aiEntity[2];
+        else if (value > 96 && aiEntity.Length >= 4 && player.Level > 8) gameObject = aiEntity[3];
+        else if (value > 94 && aiEntity.Length >= 5 && player.Level > 10) gameObject = aiEntity[4];
         else gameObject = aiEntity[1];
         SpawnEntity(gameObject);
     }
@@ -51,7 +51,7 @@ public class SpawnSystem : MonoBehaviour
     private bool DoteInScreen(Vector2 vector)
     {
         Vector2 playerPosition = player == null ? new Vector2(0, 0) : player.transform.position;
-        Rect rect = new Rect(playerPosition.x-16, playerPosition.y-10,33,20);
+        Rect rect = new Rect(playerPosition.x-10, playerPosition.y-9,20,18);
         if (rect.Contains(vector)) return true;
         return false;
     }
@@ -59,8 +59,8 @@ public class SpawnSystem : MonoBehaviour
     private void SpawnEntity(GameObject gameObject)
     {
         Vector2 playerPosition = player==null? new Vector2(0,0): player.transform.position;
-        int positionX = Random.Range((int)playerPosition.x - range, (int)playerPosition.x + range);
-        int positionY = Random.Range((int)playerPosition.y - range, (int)playerPosition.y + range);
+        int positionX = Random.Range((int)playerPosition.x - 12, (int)playerPosition.x + 12);
+        int positionY = Random.Range((int)playerPosition.y - 11, (int)playerPosition.y + 11);
 
         while (DoteInScreen(new Vector2(positionX, positionY)))
         {

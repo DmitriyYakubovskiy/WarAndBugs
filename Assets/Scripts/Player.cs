@@ -8,6 +8,8 @@ public class Player : Entity
     [SerializeField] private GameObject diePanel;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private ExpBar expBar;
+    [SerializeField] private MoneyView moneyView;
+    private int money = 0;
     private int level=1;
     private float exp;
 
@@ -29,6 +31,16 @@ public class Player : Entity
             levelText.text ="LVL: "+level.ToString();
             improvementSystem.SetActive(true);
             Entities = (int)Mathf.Round((float)(Entities * 1.1));
+        }
+    }
+    
+    public int Money
+    { 
+        get=>money;
+        set
+        {
+            money = value;
+            moneyView.UpdateMoney(money); 
         }
     }
 
@@ -83,6 +95,11 @@ public class Player : Entity
 
     private void OnDestroy()
     {
+        if (PlayerPrefs.HasKey("money"))
+        {
+            Money += PlayerPrefs.GetInt("money");
+        }
+        PlayerPrefs.SetInt("money", Money);
         resultPanel.levelText.text = "Level: " + Level;
         resultPanel.killsText.text = "Kills: " + Kills;
         if(diePanel != null) diePanel.SetActive(true);

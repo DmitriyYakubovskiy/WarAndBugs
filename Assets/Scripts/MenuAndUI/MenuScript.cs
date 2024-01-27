@@ -3,7 +3,6 @@ using UnityEngine;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
-    [SerializeField] private Pause pause;
     private bool IsPaused { get; set; } = false;
 
     private void Update()
@@ -20,13 +19,13 @@ public class MenuScript : MonoBehaviour
         {
             menuPanel.SetActive(true);
             IsPaused = true;
-            pause.PauseGame();
+            Pause.PauseGame();
         }
         else
         {
             menuPanel.SetActive(false);
             IsPaused = false;
-            pause.ContinueGame();
+            Pause.ContinueGame();
         }
     }
 }

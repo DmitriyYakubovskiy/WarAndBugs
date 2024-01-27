@@ -262,10 +262,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 257e23b6794f8ac419561c64a1e146a8, type: 3}
   hp: {fileID: 3967406298632817052}
   speed: 1.2
-  lives: 140
+  lives: 350
   timeDeadAnimation: 2
   expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
-  exp: 240
+  money: 6
+  exp: 540
   damage: 60
   startTimeAttack: 1.1
   timeAttackAnimation: 1.1
