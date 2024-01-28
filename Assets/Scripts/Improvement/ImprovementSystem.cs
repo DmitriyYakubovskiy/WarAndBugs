@@ -17,29 +17,7 @@ public class ImprovementSystem : Sound
 
     private void Awake()
     {
-        if (!PlayerPrefs.HasKey("gun_1"))
-        {
-            PlayerPrefs.SetInt("gun_1", 1);
-        }
-        if (!PlayerPrefs.HasKey("gun_2"))
-        {
-            PlayerPrefs.SetInt("gun_2", 1);
-        }
-        if (!PlayerPrefs.HasKey("gun_3"))
-        {
-            PlayerPrefs.SetInt("gun_3", 1);
-        }
-        for (int i = 0; i < allGuns.Length; i++)
-        {
-            if (PlayerPrefs.HasKey("gun_" + i.ToString()))
-            {
-                if (PlayerPrefs.GetInt("gun_" + i.ToString()) == 1)
-                {
-                    availableGuns.Add(allGuns[i]);
-                    availableButtonsGuns.Add(buttonsGuns[i]);
-                }
-            }
-        }
+        allGuns[PlayerPrefs.GetInt("selectedGun")].SetActive(true);
     }
 
     private void Update()
@@ -61,27 +39,27 @@ public class ImprovementSystem : Sound
             {
                 availableButtonsGuns[i].SetActive(false);
             }
-            if (player.GetComponent<Player>().Level % 10 == 0)
-            {
-                indexes[0] = random.Next(0, availableGuns.Count);
-                indexes[1] = random.Next(0, availableGuns.Count);
-                while (indexes[1] == indexes[0])
-                {
-                    indexes[1] = (indexes[1] + 1) % availableGuns.Count;
-                }
-                indexes[2] = random.Next(0, availableGuns.Count);
-                while (indexes[2] == indexes[1] || indexes[2] == indexes[0])
-                {
-                    indexes[2] = (indexes[2] + 1) % availableGuns.Count;
-                }
-                for (int i = 0; i < indexes.Length; i++)
-                {
-                    availableButtonsGuns[indexes[i]].SetActive(true);
-                    availableButtonsGuns[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
-                }
-            }
-            else
-            {
+            //if (player.GetComponent<Player>().Level % 10 == 0)
+            //{
+            //    indexes[0] = random.Next(0, availableGuns.Count);
+            //    indexes[1] = random.Next(0, availableGuns.Count);
+            //    while (indexes[1] == indexes[0])
+            //    {
+            //        indexes[1] = (indexes[1] + 1) % availableGuns.Count;
+            //    }
+            //    indexes[2] = random.Next(0, availableGuns.Count);
+            //    while (indexes[2] == indexes[1] || indexes[2] == indexes[0])
+            //    {
+            //        indexes[2] = (indexes[2] + 1) % availableGuns.Count;
+            //    }
+            //    for (int i = 0; i < indexes.Length; i++)
+            //    {
+            //        availableButtonsGuns[indexes[i]].SetActive(true);
+            //        availableButtonsGuns[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
+            //    }
+            //}
+            //else
+            //{
                 indexes[0] = random.Next(0, gameObjects.Length);
                 indexes[1] = random.Next(0, gameObjects.Length);
                 while (indexes[1] == indexes[0])
@@ -98,7 +76,7 @@ public class ImprovementSystem : Sound
                     buttons[indexes[i]].SetActive(true);
                     buttons[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
                 }
-            }
+            //}
         }
     }
 

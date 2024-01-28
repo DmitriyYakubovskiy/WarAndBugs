@@ -267,7 +267,7 @@ MonoBehaviour:
   WeaponFire: {fileID: 2129718463918638480}
   transformPoint: {fileID: 4314384922024247131}
   player: {fileID: 0}
-  startTime: 0.25
+  startTime: 0.18
   KSpeedPlayer: 1.1
 --- !u!1 &5967028603330831019
 GameObject:

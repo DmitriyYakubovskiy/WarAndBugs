@@ -19,7 +19,7 @@ public class SpawnSystem : MonoBehaviour
         timeLeft += Time.deltaTime;
         if (Mathf.FloorToInt(timeLeft / 30)==1)
         {
-            startTime *= 0.96f;
+            startTime *= 0.85f;
             SpawnEntity(aiEntity[0]);
             timeLeft = 0;
         }
