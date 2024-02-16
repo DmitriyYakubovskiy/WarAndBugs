@@ -2,25 +2,26 @@ using UnityEngine;
 
 public class Exp : Sound
 {
-    [SerializeField] private Player player;
-    [SerializeField] private float startTime=0.2f;
-    [SerializeField] private float speed =5;
+    [SerializeField] private float speed = 5;
     private Rigidbody2D rigidbody=>GetComponent<Rigidbody2D>();
+    private Player player;
     private Vector2 moveVector;
-    private float time;
-    private bool check = false;
-    public float exp;
+    public float StartTime { get; set; } = 0.2f;
+    public bool Check { get; set; } = false; 
+    public float ExpCount { get; set; }
+    public float Time { get; set; }
 
     private void Awake()
     {
-        time = startTime;
+        SearchPlayer();
+        Time = StartTime;
     }
 
     private void Update()
     {
-        if (check)
+        if (Check)
         {
-            if (time > 0)
+            if (Time > 0)
             {
                 var PlayerVector = player.transform.position;
                 var ThisPosition = transform.position;
@@ -45,11 +46,16 @@ public class Exp : Sound
             else
             {
                 moveVector.x = 0; moveVector.y = 0;
-                transform.position =Vector3.Lerp(transform.position,player.transform.position,(speed*player.KSpeed*player.KSpeedFromWeapon)*Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, player.transform.position,(speed * player.KSpeed * player.KSpeedFromWeapon)* UnityEngine.Time.deltaTime);
             }
             Move();
             RechargeTime();
         }
+    }
+
+    private void SearchPlayer()
+    {
+        if (player == null) player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     private void Move()
@@ -61,21 +67,20 @@ public class Exp : Sound
 
     private void RechargeTime()
     {
-        if (time > 0) time -= Time.deltaTime;
+        if (Time > 0) Time -= UnityEngine.Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (check)
+            if (Check)
             {
                 ////PlaySound(0);
-                player.Exp += exp;
+                player.Exp += ExpCount;
                 Destroy(gameObject);
             }
-            player = collision.GetComponent<Player>();
-            check=true;
+            Check=true;
         }
     }
 }

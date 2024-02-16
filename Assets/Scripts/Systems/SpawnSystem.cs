@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class SpawnSystem : MonoBehaviour
 {
@@ -12,16 +13,23 @@ public class SpawnSystem : MonoBehaviour
 
     private float time = 0;
     private int range = 25;
-    private float timeLeft = 0f;
+    private float timeLeft1 = 0f;
+    private float timeLeft2 = 0f;
 
     private void Update()
     {
-        timeLeft += Time.deltaTime;
-        if (Mathf.FloorToInt(timeLeft / 30)==1)
+        timeLeft1 += Time.deltaTime;
+        timeLeft2 += Time.deltaTime;
+        if (Mathf.FloorToInt(timeLeft1 / 30)==1)
         {
-            startTime *= 0.85f;
+            startTime *= 0.96f;
             SpawnEntity(aiEntity[0]);
-            timeLeft = 0;
+            timeLeft1 = 0;
+        }
+        if (Mathf.FloorToInt(timeLeft2 / 60) == 1)
+        {
+            SpawnEntity(aiEntity[1]);
+            timeLeft2 = 0;
         }
         if (RechargeTimeSpawn())
         {
@@ -41,17 +49,17 @@ public class SpawnSystem : MonoBehaviour
     {
         GameObject gameObject;
         int value = UnityEngine.Random.Range(0, 101);
-        if (value > 99 && aiEntity.Length >= 3 && player.Level > 5) gameObject = aiEntity[2];
-        else if (value > 96 && aiEntity.Length >= 4 && player.Level > 8) gameObject = aiEntity[3];
-        else if (value > 94 && aiEntity.Length >= 5 && player.Level > 10) gameObject = aiEntity[4];
-        else gameObject = aiEntity[1];
+        if (value > 96 && aiEntity.Length >= 3 && player.Level > 3) gameObject = aiEntity[3];
+        else if (value > 85 && aiEntity.Length >= 4 && player.Level > 4) gameObject = aiEntity[4];
+        else if (value > 81 && aiEntity.Length >= 5 && player.Level > 6) gameObject = aiEntity[5];
+        else gameObject = aiEntity[2];
         SpawnEntity(gameObject);
     }
-
+    
     private bool DoteInScreen(Vector2 vector)
     {
         Vector2 playerPosition = player == null ? new Vector2(0, 0) : player.transform.position;
-        Rect rect = new Rect(playerPosition.x-10, playerPosition.y-9,20,18);
+        Rect rect = new Rect(playerPosition.x-12, playerPosition.y-11,24,22);
         if (rect.Contains(vector)) return true;
         return false;
     }
@@ -59,8 +67,8 @@ public class SpawnSystem : MonoBehaviour
     private void SpawnEntity(GameObject gameObject)
     {
         Vector2 playerPosition = player==null? new Vector2(0,0): player.transform.position;
-        int positionX = Random.Range((int)playerPosition.x - 12, (int)playerPosition.x + 12);
-        int positionY = Random.Range((int)playerPosition.y - 11, (int)playerPosition.y + 11);
+        int positionX = Random.Range((int)playerPosition.x - 16, (int)playerPosition.x + 16);
+        int positionY = Random.Range((int)playerPosition.y - 14, (int)playerPosition.y + 14);
 
         while (DoteInScreen(new Vector2(positionX, positionY)))
         {

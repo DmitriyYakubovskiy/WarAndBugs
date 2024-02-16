@@ -265,11 +265,12 @@ MonoBehaviour:
   lives: 350
   timeDeadAnimation: 2
   expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
-  money: 6
-  exp: 540
+  money: 18
+  exp: 500
   damage: 60
   startTimeAttack: 1.1
   timeAttackAnimation: 1.1
+  expSize: 1.6
 --- !u!82 &2826944862794048067
 AudioSource:
   m_ObjectHideFlags: 0

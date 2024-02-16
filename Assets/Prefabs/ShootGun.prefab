@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 67105623320333744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.676, y: 0.045, z: 0}
+  m_LocalPosition: {x: 0.573, y: 0.063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -133,7 +133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2221170889911569808
 Transform:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   startTime: 2
   KSpeedPlayer: 1.2
   countBullets: 16
-  accuracy: 2
+  accuracy: 1
 --- !u!82 &7234592473290866617
 AudioSource:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ Transform:
   m_GameObject: {fileID: 6365405762795213511}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.193, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0763, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

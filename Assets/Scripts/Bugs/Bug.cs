@@ -8,6 +8,7 @@ public abstract class Bug : Entity
     [SerializeField] protected float damage;
     [SerializeField] protected float startTimeAttack;
     [SerializeField] protected float timeAttackAnimation;
+    [SerializeField] private float expSize = 1;
 
     protected GameObject playerForAttack = null;
     protected GameObject player;
@@ -80,6 +81,11 @@ public abstract class Bug : Entity
 
         if (lives <= 0)
         {
+            if (player != null)
+            {
+                player.GetComponent<Player>().Kills++;
+                player.GetComponent<Player>().Money += money;
+            }
             lives = 0;
             isDead = true;
             gameObject.GetComponent<Collider2D>().enabled = false;
@@ -93,7 +99,8 @@ public abstract class Bug : Entity
                 postion.y = Random.Range(-3, 4) / 10f;
                 postion.z = 0;
                 var buf = Instantiate(expGameObject, transform.position + postion, transform.rotation);
-                buf.GetComponent<Exp>().exp = exp / value;
+                buf.GetComponent<Exp>().ExpCount = exp / value;
+                buf.transform.localScale = new Vector3(expSize/Mathf.Pow(value,0.25f), expSize / Mathf.Pow(value, 0.25f));
             }
         }
         else
@@ -202,14 +209,5 @@ public abstract class Bug : Entity
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && collision.isTrigger==false) playerForAttack = null;
-    }
-
-    protected virtual void OnDestroy()
-    {
-        if (player != null)
-        {
-            player.GetComponent<Player>().Kills++;
-            player.GetComponent<Player>().Money += money;
-        }
     }
 }

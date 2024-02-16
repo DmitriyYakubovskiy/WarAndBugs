@@ -4,11 +4,8 @@ using UnityEngine;
 public class ImprovementSystem : Sound
 {
     [SerializeField] private GameObject[] gameObjects;
-    [SerializeField] private List<GameObject> availableGuns;
     [SerializeField] private GameObject[] allGuns;
     [SerializeField] private GameObject[] buttons;
-    [SerializeField] private List<GameObject> availableButtonsGuns;
-    [SerializeField] private GameObject[] buttonsGuns;
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject player;
 
@@ -34,10 +31,6 @@ public class ImprovementSystem : Sound
             for (int i = 0; i < buttons.Length; i++)
             {
                 buttons[i].SetActive(false);
-            }
-            for (int i = 0; i < availableButtonsGuns.Count; i++)
-            {
-                availableButtonsGuns[i].SetActive(false);
             }
             //if (player.GetComponent<Player>().Level % 10 == 0)
             //{
@@ -82,18 +75,13 @@ public class ImprovementSystem : Sound
 
     public void ButtonClick(int index)
     {
-        if (player.GetComponent<Player>().Level % 10 == 0)
-        {
-            for (int i = 0; i < availableGuns.Count; i++)
-            {
-                availableGuns[i].gameObject.SetActive(false);
-            }
-            availableGuns[index].gameObject.SetActive(true);
-        }
-        else
-        {
+        //if (player.GetComponent<Player>().Level % 10 == 0)
+        //{
+        //}
+        //else
+        //{
             gameObjects[index].gameObject.SetActive(true);
-        }
+        //}
         check = false;
         Pause.ContinueGame();           
         panel.SetActive(false); 

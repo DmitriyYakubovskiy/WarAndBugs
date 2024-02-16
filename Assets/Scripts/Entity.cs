@@ -17,7 +17,7 @@ public class Entity : Sound
     protected Vector2 moveVector;
     protected Vector2 previousPosition;
     protected float startSpeed;
-    protected bool isDead=false;
+    public bool isDead=false;
 
     public float Lives
     {

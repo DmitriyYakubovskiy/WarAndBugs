@@ -9,6 +9,7 @@ public class Player : Entity
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private ExpBar expBar;
     [SerializeField] private MoneyView moneyView;
+    [SerializeField] private Camera camera;
     private int money = 0;
     private int level=1;
     private float exp;
@@ -82,10 +83,15 @@ public class Player : Entity
 
     protected override void Move(bool b)
     {
-        if (moveVector.x < 0 && b == false) SetFlip(true);
-        else if (moveVector.x > 0 && b == false) SetFlip(false);
-        if (moveVector.x < 0 && b == true) SetAngles(true);
-        else if (moveVector.x > 0 && b == true) SetAngles(false);
+        var dir = camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        if (moveVector.x > dir.x && b == false) SetFlip(true);
+        else if (moveVector.x < dir.x && b == false) SetFlip(false);
+        if (moveVector.x > dir.x && b == true) SetAngles(true);
+        else if (moveVector.x < dir.x && b == true) SetAngles(false);
+        //if (moveVector.x < 0 && b == false) SetFlip(true);
+        //else if (moveVector.x > 0 && b == false) SetFlip(false);
+        //if (moveVector.x < 0 && b == true) SetAngles(true);
+        //else if (moveVector.x > 0 && b == true) SetAngles(false);
 
         moveVector = moveVector.normalized;
         moveVector = moveVector * (speed * KSpeed * KSpeedFromWeapon);

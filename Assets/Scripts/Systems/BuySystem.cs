@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,13 +18,13 @@ public class BuySystem : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("money")) PlayerPrefs.SetInt("money", 0);
         int money = PlayerPrefs.GetInt("money");
-        if (cost[index] < money)
+        if (cost[index] <= money)
         {
             PlayerPrefs.SetInt("money", money - cost[index]);
             PlayerPrefs.SetInt("gun_" + index, 1);
             buttonsBuy[index].interactable = false;
             buttonsSelect[index].interactable = true;
-            UpdateMoney();
+            UpdateButtonsAndMoney();
         }
     } 
 
@@ -36,19 +35,18 @@ public class BuySystem : MonoBehaviour
         PlayerPrefs.SetInt("selectedGun", index);
     }
 
-    public void UpdateMoney()
+    public void OnEnable()
+    {
+        UpdateButtonsAndMoney();
+    }
+
+    public void UpdateButtonsAndMoney()
     {
         if (!PlayerPrefs.HasKey("money")) PlayerPrefs.SetInt("money", 0);
         int money = PlayerPrefs.GetInt("money");
         moneyText.text = money.ToString();
-    }
-
-    public void OnEnable()
-    {
-        UpdateMoney();
         if (!PlayerPrefs.HasKey("selectedGun")) Select(0);
         PlayerPrefs.SetInt("gun_0", 1);
-        int money = PlayerPrefs.GetInt("money");
         for (int i = 0; i < buttonsBuy.Length; i++)
         {
             moneyTexts[i].text = cost[i].ToString();
@@ -61,11 +59,18 @@ public class BuySystem : MonoBehaviour
             }
             else
             {
-                panels[i].color = Color.RGBA(1, 1, 1, 1);
+                //panels[i].color = Color.RGBA(1, 1, 1, 1);
                 buttonsSelect[i].interactable = false;
                 buttonsBuy[i].interactable = true;
                 if (cost[i] > money) buttonsBuy[i].interactable = false;
             }
         }
+    }
+
+    public void Add100()
+    {
+        int money = PlayerPrefs.GetInt("money") + 100;
+        PlayerPrefs.SetInt("money", money);
+        UpdateButtonsAndMoney();
     }
 }

@@ -12,11 +12,22 @@ public class Sound : MonoBehaviour
         audioSrc.PlayOneShot(clip,1f);
     }
 
-    public void PlaySound(int i, float volume = 1f, float p1 = 0.85f, float p2 = 1.2f)
+    public void PlaySound(int i, float volume = 1f, float p1 = 0.85f, float p2 = 1.2f, bool isDestroyed=false)
     {
         AudioClip clip = sounds[i].soundArray[Random.Range(0, sounds[i].soundArray.Length)];
         audioSrc.pitch = Random.Range(p1, p2);
-        audioSrc.PlayOneShot(clip, volume); 
+        if (isDestroyed) AudioSource.PlayClipAtPoint(clip, transform.position, volume);
+        else audioSrc.PlayOneShot(clip, volume); 
+    }
+
+    public void AudioStop()
+    {
+        if (audioSrc.isPlaying) audioSrc.Stop();
+    }
+
+    public void AudioStart(int index = 0)
+    {
+        if (!audioSrc.isPlaying) PlaySound(index);
     }
 
     [System.Serializable]

@@ -1,26 +1,27 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MoneyView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText;
     int money;
-    int i = 0;
+    int index = 0;
 
     private void View()
     {
-        if (i < money - 1)
+        if (index < money - 1)
         {
-            Invoke("View", 0.1f);
+            if(!this.IsDestroyed()) Invoke("View", 0.1f);
         }
-        if (i == money)
+        if (index == money)
         {
             moneyText.text = money.ToString();
         }
         else
         {
-            i++;
-            moneyText.text = i.ToString();
+            index++;
+            moneyText.text = index.ToString();
 
         }
     }

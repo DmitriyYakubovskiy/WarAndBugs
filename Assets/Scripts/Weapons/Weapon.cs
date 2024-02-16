@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Weapon : Sound
@@ -9,8 +10,9 @@ public class Weapon : Sound
     [SerializeField] protected Player player;
     [SerializeField] protected float startTime;
     [SerializeField] protected float KSpeedPlayer=1;
-    protected SpriteRenderer spriteRenderer;
 
+    protected SpriteRenderer spriteRenderer;
+    protected bool flip=false;
     protected float time;
 
     protected virtual void Awake()
@@ -34,6 +36,20 @@ public class Weapon : Sound
             Shot();
         }
     }
+
+    //protected virtual void Flip()
+    //{
+    //    if (transform.rotation.y==0 && flip== true)
+    //    {
+    //        transform.position = new Vector3(-transform.position.x, transform.position.y);
+    //        flip = true;
+    //    }
+    //    if (transform.rotation.x == -180 && flip == false)
+    //    {
+    //        transform.position = new Vector3(-transform.position.x, transform.position.y);
+    //        flip = false;
+    //    }
+    //}
 
     protected virtual void MakeRotation()
     {

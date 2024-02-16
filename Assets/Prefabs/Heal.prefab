@@ -67,7 +67,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2492981, y: 0.24929821}
+  m_Offset: {x: -0.24929857, y: 0.24842733}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -78,7 +78,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5014038, y: 0.50140357}
+  m_Size: {x: 0.63029766, y: 0.6285552}
   m_EdgeRadius: 0
 --- !u!114 &4693184219545788918
 MonoBehaviour:
@@ -92,7 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf0f5f85e84c2e47b6eee799e9f2e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - soundArray:
+    - {fileID: 8300000, guid: 22160647d9cb2bd4b8a3c4acb526bc3e, type: 3}
+  procentHp: 25
 --- !u!82 &3896380369387621409
 AudioSource:
   m_ObjectHideFlags: 0
@@ -262,8 +265,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.15779541, g: 0.9150943, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a18cb37a43f860745a749a16088d0ef1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
