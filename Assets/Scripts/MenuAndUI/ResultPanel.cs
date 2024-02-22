@@ -6,9 +6,9 @@ public class ResultPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private Player player;
     [SerializeField] private Timer timer;
-    private bool check=true;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI killsText;
+    private bool check=true;
 
     private void Update()
     {

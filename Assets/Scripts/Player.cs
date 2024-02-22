@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : Entity
@@ -6,10 +7,10 @@ public class Player : Entity
     [SerializeField] private ResultPanel resultPanel;
     [SerializeField] private GameObject improvementSystem;
     [SerializeField] private GameObject diePanel;
+    [SerializeField] private GameObject grenade;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private ExpBar expBar;
     [SerializeField] private MoneyView moneyView;
-    [SerializeField] private Camera camera;
     private int money = 0;
     private int level=1;
     private float exp;
@@ -52,6 +53,11 @@ public class Player : Entity
     public float KSpeed { get; set; } = 1;
     public float KSpeedFromWeapon { get; set; } = 1;
 
+    public void GrenadeSetActive(bool b)
+    {
+        grenade.SetActive(b);
+    }
+
     private void Start()
     {
         hp.MaxHealth=Lives;
@@ -62,12 +68,12 @@ public class Player : Entity
         RechargeTimeDead();
         moveVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        Move(false);
         hp.ShowHealth(this);
     }
 
     private void FixedUpdate()
     {
+        Move(false);
         if (moveVector.y == 0 && moveVector.x == 0)
         {
             State = States.Idle;
@@ -83,7 +89,7 @@ public class Player : Entity
 
     protected override void Move(bool b)
     {
-        var dir = camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        var dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         if (moveVector.x > dir.x && b == false) SetFlip(true);
         else if (moveVector.x < dir.x && b == false) SetFlip(false);
         if (moveVector.x > dir.x && b == true) SetAngles(true);
@@ -108,6 +114,6 @@ public class Player : Entity
         PlayerPrefs.SetInt("money", Money);
         resultPanel.levelText.text = "Level: " + Level;
         resultPanel.killsText.text = "Kills: " + Kills;
-        if(diePanel != null) diePanel.SetActive(true);
+        if(!diePanel.gameObject.IsDestroyed()) diePanel?.SetActive(true);
     }
 }

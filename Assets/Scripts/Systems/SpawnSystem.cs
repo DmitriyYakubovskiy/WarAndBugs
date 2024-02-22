@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Threading.Tasks;
 
 public class SpawnSystem : MonoBehaviour
 {
@@ -13,23 +12,30 @@ public class SpawnSystem : MonoBehaviour
 
     private float time = 0;
     private int range = 25;
-    private float timeLeft1 = 0f;
-    private float timeLeft2 = 0f;
+    private float timeHealth = 0f;
+    private float timeLeftHealthMax = 0f;
+    private float timeLeftGrenade = 0f;
 
     private void Update()
     {
-        timeLeft1 += Time.deltaTime;
-        timeLeft2 += Time.deltaTime;
-        if (Mathf.FloorToInt(timeLeft1 / 30)==1)
+        timeHealth += Time.deltaTime;
+        timeLeftHealthMax += Time.deltaTime;
+        timeLeftGrenade += Time.deltaTime;
+        if (Mathf.FloorToInt(timeHealth / 30)==1)
         {
             startTime *= 0.96f;
             SpawnEntity(aiEntity[0]);
-            timeLeft1 = 0;
+            timeHealth = 0;
         }
-        if (Mathf.FloorToInt(timeLeft2 / 60) == 1)
+        if (Mathf.FloorToInt(timeLeftHealthMax / 60) == 1)
         {
             SpawnEntity(aiEntity[1]);
-            timeLeft2 = 0;
+            timeLeftHealthMax = 0;
+        }
+        if (Mathf.FloorToInt(timeLeftGrenade / 120) == 1)
+        {
+            SpawnEntity(aiEntity[2]);
+            timeLeftGrenade = 0;
         }
         if (RechargeTimeSpawn())
         {
@@ -49,10 +55,10 @@ public class SpawnSystem : MonoBehaviour
     {
         GameObject gameObject;
         int value = UnityEngine.Random.Range(0, 101);
-        if (value > 96 && aiEntity.Length >= 3 && player.Level > 3) gameObject = aiEntity[3];
-        else if (value > 85 && aiEntity.Length >= 4 && player.Level > 4) gameObject = aiEntity[4];
-        else if (value > 81 && aiEntity.Length >= 5 && player.Level > 6) gameObject = aiEntity[5];
-        else gameObject = aiEntity[2];
+        if (value > 96 && aiEntity.Length >= 3 && player.Level > 3) gameObject = aiEntity[4];
+        else if (value > 85 && aiEntity.Length >= 4 && player.Level > 4) gameObject = aiEntity[5];
+        else if (value > 81 && aiEntity.Length >= 5 && player.Level > 6) gameObject = aiEntity[6];
+        else gameObject = aiEntity[3];
         SpawnEntity(gameObject);
     }
     

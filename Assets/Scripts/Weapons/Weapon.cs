@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Weapon : Sound
 {
-    [SerializeField] protected Camera camera;
     [SerializeField] protected GameObject bullet;
     [SerializeField] protected GameObject WeaponFire;
     [SerializeField] protected Transform transformPoint;
     [SerializeField] protected Player player;
+    [SerializeField] protected string name;
     [SerializeField] protected float startTime;
     [SerializeField] protected float KSpeedPlayer=1;
 
@@ -17,6 +17,13 @@ public class Weapon : Sound
 
     protected virtual void Awake()
     {
+        if (!PlayerPrefs.HasKey(name))
+        {
+            if (name == "Gun") PlayerPrefs.SetInt(name, 1);
+            else PlayerPrefs.SetInt(name, 0);
+        }
+        if (!PlayerPrefs.HasKey("selectedGun")) PlayerPrefs.SetString("selectedGun", "Gun");
+        if (PlayerPrefs.GetString("selectedGun") != name) gameObject.SetActive(false);
         foreach (Transform child in transform.GetComponentsInChildren<Transform>())
         {
             if (child.gameObject.tag == "Sprite")
@@ -29,6 +36,8 @@ public class Weapon : Sound
 
     protected virtual void Update()
     {
+        if (Time.timeScale == 0) AudioPause();
+        else AudioStart();
         if (gameObject.activeSelf) player.KSpeedFromWeapon = KSpeedPlayer;
         if (Time.timeScale != 0)
         {
@@ -53,7 +62,7 @@ public class Weapon : Sound
 
     protected virtual void MakeRotation()
     {
-        var dir = camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        var dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         float rotationY = transform.eulerAngles.y;
         if (Mathf.Abs(rotationZ) >= 90 && rotationY == 0) 

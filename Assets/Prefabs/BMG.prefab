@@ -51,12 +51,12 @@ MonoBehaviour:
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: 70ffa6a84c7544245ab8d209f17d0ea6, type: 3}
-  camera: {fileID: 0}
   bullet: {fileID: 6154560366862959458, guid: e8996cdb9912ece40bd35e00a3439f5c, type: 3}
   WeaponFire: {fileID: 4214144353036093979}
   transformPoint: {fileID: 7951334042170267923}
   player: {fileID: 0}
-  startTime: 1
+  name: BMG
+  startTime: 1.5
   KSpeedPlayer: 0.7
 --- !u!82 &2456831194934537479
 AudioSource:

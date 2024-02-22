@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ImprovementSystem : Sound
@@ -11,11 +10,6 @@ public class ImprovementSystem : Sound
 
     private int[] indexes=new int[3];
     private bool check=false;
-
-    private void Awake()
-    {
-        allGuns[PlayerPrefs.GetInt("selectedGun")].SetActive(true);
-    }
 
     private void Update()
     {

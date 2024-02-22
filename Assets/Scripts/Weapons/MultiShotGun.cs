@@ -22,7 +22,8 @@ public class MultiShotGun : Weapon
         time -= Time.deltaTime;
         if (time > startTime-startTimeAttack)
         {
-            AudioStart(); WeaponFire.SetActive(true);
+            AudioStart(0); 
+            WeaponFire.SetActive(true);
             if (Input.GetMouseButton(0) && timeDelay <= 0)
             {
                 timeDelay = delay / player.KReload; 
@@ -35,7 +36,8 @@ public class MultiShotGun : Weapon
         }
         else
         {
-            AudioStop(); WeaponFire.SetActive(false);
+            AudioStop();
+            WeaponFire.SetActive(false);
         }
         if (time <= 0)
         {

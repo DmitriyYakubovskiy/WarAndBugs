@@ -1,7 +1,11 @@
+using UnityEngine;
+
 public class StandartBug : Bug
 {
     private void Update()
     {
+        if (Time.timeScale == 0) AudioPause();
+        else AudioStart();
         if (isDead)
         {
             RechargeTimeDead();

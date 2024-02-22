@@ -25,9 +25,18 @@ public class Sound : MonoBehaviour
         if (audioSrc.isPlaying) audioSrc.Stop();
     }
 
-    public void AudioStart(int index = 0)
+    public void AudioPause()
     {
-        if (!audioSrc.isPlaying) PlaySound(index);
+        if (audioSrc.isPlaying) audioSrc.Pause();
+    }
+
+    public void AudioStart(int index = -1)
+    {
+        if (!audioSrc.isPlaying)
+        {
+            if(index==-1) audioSrc.UnPause();
+            else PlaySound(index);
+        }
     }
 
     [System.Serializable]

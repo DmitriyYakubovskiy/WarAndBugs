@@ -161,6 +161,7 @@ MonoBehaviour:
   speed: 2.5
   lives: 17
   timeDeadAnimation: 1.4
+  isDead: 0
   expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
   money: 2
   exp: 15

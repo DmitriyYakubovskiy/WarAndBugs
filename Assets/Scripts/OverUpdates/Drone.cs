@@ -22,6 +22,7 @@ public class Drone : Sound
     private float startSpeed;
     private float timeSearchBug = 0;
     private float timeAttack=0;
+    private float kDamage = 1;
 
     private Animator Animator { get; set; }
     public bool IsFlip { get; set; }
@@ -34,7 +35,6 @@ public class Drone : Sound
 
     private void Awake()
     {
-        startSpeed = speed;
         Animator = GetComponentInChildren<Animator>();
         transform = GetComponent<Transform>();
         rigidbody = GetComponent<Rigidbody2D>();
@@ -47,15 +47,32 @@ public class Drone : Sound
             }
         }
         SearchPlayer();
+
+        if (PlayerPrefs.GetInt("Drone") == 0) gameObject.SetActive(false);
+        startSpeed = speed*player.GetComponent<Player>().KSpeed;
+        if (PlayerPrefs.HasKey("Drone"))
+        {
+            int level = PlayerPrefs.GetInt("Drone");
+            for (int i = 0; i < level; i++)
+            {
+                startTimeAttack *= 0.75f;
+                kDamage *= 1.05f;
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Drone", 0);
+        }
     }
 
     private void Update()
     {
+        if (Time.timeScale == 0) AudioPause();
+        else AudioStart();
         SearchBug();
         MakeRotation();
         Attack();
 
-        Move(true);
         AiLogics();
 
         DistanceToBug();
@@ -64,6 +81,7 @@ public class Drone : Sound
 
     private void FixedUpdate()
     {
+        Move();
         Animator.speed = 1;
         //if (1 == 1)
         //{
@@ -114,7 +132,8 @@ public class Drone : Sound
             if (timeAttack <= 0)
             {
                 PlaySound(0, 0.1f);
-                Instantiate(bullet, transformPoint.transform.position, transformPoint.transform.rotation);
+                var obj=Instantiate(bullet, transformPoint.transform.position, transformPoint.transform.rotation);
+                obj.GetComponent<Bullet>().damage *= kDamage;
                 WeaponFire.SetActive(true);
                 Invoke("DisanabledWeaponFire", 0.1f);
                 timeAttack = startTimeAttack;
@@ -122,12 +141,10 @@ public class Drone : Sound
         }
     }
 
-    private void Move(bool b)
+    private void Move()
     {
-        if (moveVector.x < 0 && b == false) SetFlip(true);
-        else if (moveVector.x > 0 && b == false) SetFlip(false);
-        if (moveVector.x < 0 && b == true) SetAngles(true);
-        else if (moveVector.x > 0 && b == true) SetAngles(false);
+        if (moveVector.x < 0) SetAngles(true);
+        else if (moveVector.x > 0) SetAngles(false);
 
         moveVector = moveVector.normalized;
         moveVector = moveVector * speed;
