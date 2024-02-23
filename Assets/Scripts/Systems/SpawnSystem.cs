@@ -21,18 +21,18 @@ public class SpawnSystem : MonoBehaviour
         timeHealth += Time.deltaTime;
         timeLeftHealthMax += Time.deltaTime;
         timeLeftGrenade += Time.deltaTime;
-        if (Mathf.FloorToInt(timeHealth / 30)==1)
+        if (Mathf.FloorToInt(timeHealth / 60)==1)
         {
             startTime *= 0.96f;
             SpawnEntity(aiEntity[0]);
             timeHealth = 0;
         }
-        if (Mathf.FloorToInt(timeLeftHealthMax / 60) == 1)
+        if (Mathf.FloorToInt(timeLeftHealthMax / 120) == 1)
         {
             SpawnEntity(aiEntity[1]);
             timeLeftHealthMax = 0;
         }
-        if (Mathf.FloorToInt(timeLeftGrenade / 120) == 1)
+        if (Mathf.FloorToInt(timeLeftGrenade / 110) == 1 && PlayerPrefs.GetInt("Grenade")!=0)
         {
             SpawnEntity(aiEntity[2]);
             timeLeftGrenade = 0;
@@ -65,7 +65,7 @@ public class SpawnSystem : MonoBehaviour
     private bool DoteInScreen(Vector2 vector)
     {
         Vector2 playerPosition = player == null ? new Vector2(0, 0) : player.transform.position;
-        Rect rect = new Rect(playerPosition.x-12, playerPosition.y-11,24,22);
+        Rect rect = new Rect(playerPosition.x-14, playerPosition.y-12,28,24);
         if (rect.Contains(vector)) return true;
         return false;
     }
@@ -73,8 +73,8 @@ public class SpawnSystem : MonoBehaviour
     private void SpawnEntity(GameObject gameObject)
     {
         Vector2 playerPosition = player==null? new Vector2(0,0): player.transform.position;
-        int positionX = Random.Range((int)playerPosition.x - 16, (int)playerPosition.x + 16);
-        int positionY = Random.Range((int)playerPosition.y - 14, (int)playerPosition.y + 14);
+        int positionX = Random.Range((int)playerPosition.x - 20, (int)playerPosition.x + 20);
+        int positionY = Random.Range((int)playerPosition.y - 17, (int)playerPosition.y + 17);
 
         while (DoteInScreen(new Vector2(positionX, positionY)))
         {

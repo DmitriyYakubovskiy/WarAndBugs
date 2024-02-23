@@ -278,8 +278,9 @@ MonoBehaviour:
   transformPoint: {fileID: 3843163121936879578}
   player: {fileID: 0}
   name: Arc
-  startTime: 4
+  startMainReloadTime: 4
   KSpeedPlayer: 1
+  accuracy: 0
   startTimeAttack: 2
   delay: 0.05
 --- !u!82 &8724900356699569102

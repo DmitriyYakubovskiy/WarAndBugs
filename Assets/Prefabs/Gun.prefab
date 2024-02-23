@@ -139,8 +139,9 @@ MonoBehaviour:
   transformPoint: {fileID: 6121579546292792698}
   player: {fileID: 0}
   name: Gun
-  startTime: 0.3
+  startMainReloadTime: 0.5
   KSpeedPlayer: 1
+  accuracy: 0
 --- !u!82 &8441453812112657733
 AudioSource:
   m_ObjectHideFlags: 0

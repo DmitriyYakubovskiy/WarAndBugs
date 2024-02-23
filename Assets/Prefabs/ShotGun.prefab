@@ -139,10 +139,10 @@ MonoBehaviour:
   transformPoint: {fileID: 6851479497296099024}
   player: {fileID: 0}
   name: ShotGun
-  startTime: 2
+  startMainReloadTime: 2
   KSpeedPlayer: 1.2
-  countBullets: 16
   accuracy: 1
+  countBullets: 16
 --- !u!82 &619925628351020859
 AudioSource:
   m_ObjectHideFlags: 0

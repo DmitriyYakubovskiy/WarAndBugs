@@ -5,11 +5,13 @@ using UnityEngine;
 public class MoneyView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private GameObject player;
     int money;
     int index = 0;
 
     private void View()
     {
+        if (player.IsDestroyed()) return;
         if (index < money - 1)
         {
             if(!this.IsDestroyed()) Invoke("View", 0.1f);
@@ -22,7 +24,6 @@ public class MoneyView : MonoBehaviour
         {
             index++;
             moneyText.text = index.ToString();
-
         }
     }
 

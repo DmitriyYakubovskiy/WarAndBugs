@@ -56,8 +56,9 @@ MonoBehaviour:
   transformPoint: {fileID: 7951334042170267923}
   player: {fileID: 0}
   name: BMG
-  startTime: 1.5
+  startMainReloadTime: 3
   KSpeedPlayer: 0.7
+  accuracy: 0
 --- !u!82 &2456831194934537479
 AudioSource:
   m_ObjectHideFlags: 0

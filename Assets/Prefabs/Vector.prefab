@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0434, y: -0.029, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1898085634489764189}
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 2617546610534489616}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.295, y: 0.035, z: 0}
+  m_LocalPosition: {x: 0.3852, y: 0.0512, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1898085634489764189
 Transform:
   m_ObjectHideFlags: 0
@@ -351,5 +351,6 @@ MonoBehaviour:
   transformPoint: {fileID: 1130149098482691772}
   player: {fileID: 0}
   name: Vector
-  startTime: 0.13
-  KSpeedPlayer: 1.5
+  startMainReloadTime: 0.15
+  KSpeedPlayer: 1.3
+  accuracy: 10

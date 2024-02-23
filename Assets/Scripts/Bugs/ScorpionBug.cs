@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScorpionBug : Bug
 {
@@ -23,8 +24,10 @@ public class ScorpionBug : Bug
         Move(true);
         hp.ShowHealth(this);
     }
+
     public override void GetDamage()
     {
+        bullet.GetComponent<Bullet>().TimeDieBullet = 6;
         Instantiate(bullet, transformPoint.transform.position, transformPoint.transform.rotation);
         System.Random random = new System.Random();
         randomMoveTime = random.Next(10, (int)startTimeAttack * 95)/100;

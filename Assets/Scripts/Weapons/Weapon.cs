@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Weapon : Sound
@@ -8,8 +7,9 @@ public class Weapon : Sound
     [SerializeField] protected Transform transformPoint;
     [SerializeField] protected Player player;
     [SerializeField] protected string name;
-    [SerializeField] protected float startTime;
+    [SerializeField] protected float startMainReloadTime;
     [SerializeField] protected float KSpeedPlayer=1;
+    [SerializeField] protected float accuracy=0;
 
     protected SpriteRenderer spriteRenderer;
     protected bool flip=false;
@@ -45,20 +45,6 @@ public class Weapon : Sound
             Shot();
         }
     }
-
-    //protected virtual void Flip()
-    //{
-    //    if (transform.rotation.y==0 && flip== true)
-    //    {
-    //        transform.position = new Vector3(-transform.position.x, transform.position.y);
-    //        flip = true;
-    //    }
-    //    if (transform.rotation.x == -180 && flip == false)
-    //    {
-    //        transform.position = new Vector3(-transform.position.x, transform.position.y);
-    //        flip = false;
-    //    }
-    //}
 
     protected virtual void MakeRotation()
     {
@@ -99,9 +85,11 @@ public class Weapon : Sound
                 PlaySound(0,0.2f);
                 WeaponFire.SetActive(true);
                 Invoke("DisanabledWeaponFire", 0.1f);
-                var bulletTmp=Instantiate(bullet,transformPoint.position,transform.rotation);
+                System.Random random = new System.Random();
+                float accuracyTmp=random.Next((int)(-accuracy*100),(int)(accuracy*100))/100;
+                var bulletTmp= Instantiate(bullet, transformPoint.position, Quaternion.Euler(new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - accuracyTmp)));
                 bulletTmp.GetComponent<Bullet>().damage *=player.KDamage;
-                time = startTime/player.KReload;
+                time = startMainReloadTime/player.KReload;
             }
         }
         else

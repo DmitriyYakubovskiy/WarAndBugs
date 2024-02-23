@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class DamageUp : MonoBehaviour
+public class DamageUp : Up
 {
-    [SerializeField] private Player player;
-    [SerializeField] private float k;
+    private void Awake()
+    {
+        UpgradesName = "DamageUp";
+        gameObject.SetActive(false);
+    }
 
     private void Update()
     {

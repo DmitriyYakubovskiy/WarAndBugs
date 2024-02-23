@@ -7,7 +7,6 @@ public class MultiShotGun : Weapon
 
     private float timeDelay=0;
 
-
     protected override void Shot()
     {
         if (CanShot())
@@ -20,7 +19,7 @@ public class MultiShotGun : Weapon
     private bool CanShot()
     {
         time -= Time.deltaTime;
-        if (time > startTime-startTimeAttack)
+        if (time > startMainReloadTime-startTimeAttack)
         {
             AudioStart(0); 
             WeaponFire.SetActive(true);
@@ -43,7 +42,7 @@ public class MultiShotGun : Weapon
         {
             if (Input.GetMouseButton(0))
             {
-                time = startTime / player.KReload;
+                time = startMainReloadTime / player.KReload;
                 return true;
             }
         }

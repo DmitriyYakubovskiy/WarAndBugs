@@ -171,8 +171,9 @@ MonoBehaviour:
   transformPoint: {fileID: 2694326587921330381}
   player: {fileID: 0}
   name: LMG
-  startTime: 0.08
+  startMainReloadTime: 0.09
   KSpeedPlayer: 0.9
+  accuracy: 10
 --- !u!82 &1464153586385389813
 AudioSource:
   m_ObjectHideFlags: 0

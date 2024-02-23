@@ -1,15 +1,16 @@
-using UnityEngine;
-
-public class SpeedUp : MonoBehaviour
+public class SpeedUp : Up
 {
-    [SerializeField] private Player player;
-    [SerializeField] private float k;
+    private void Awake()
+    {
+        UpgradesName = "SpeedUp";
+        gameObject.SetActive(false);
+    }
 
     private void Update()
     {
         if (gameObject.activeSelf)
         {
-            player.KSpeed += k/100;
+            player.KSpeed += k / 100;
             gameObject.SetActive(false);
         }
     }

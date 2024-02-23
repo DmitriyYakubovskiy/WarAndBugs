@@ -15,7 +15,7 @@ public class RepitGun : Weapon
             if (Input.GetMouseButton(0))
             {
                 RepitShot();
-                time = startTime / player.KReload;
+                time = startMainReloadTime / player.KReload;
                 currentCount++;
                 return;
             }
@@ -45,7 +45,9 @@ public class RepitGun : Weapon
         PlaySound(0, 0.2f);
         WeaponFire.SetActive(true);
         Invoke("DisanabledWeaponFire", 0.1f);
-        var bulletTmp = Instantiate(bullet, transformPoint.position, transform.rotation);
+        System.Random random = new System.Random();
+        float accuracyTmp = random.Next((int)(-accuracy * 100), (int)(accuracy * 100)) / 100;
+        var bulletTmp = Instantiate(bullet, transformPoint.position, Quaternion.Euler(new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - accuracyTmp)));
         bulletTmp.GetComponent<Bullet>().damage *= player.KDamage;
     }
 }

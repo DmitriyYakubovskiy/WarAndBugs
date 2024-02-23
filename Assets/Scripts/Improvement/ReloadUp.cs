@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class ReloadUp : MonoBehaviour
+public class ReloadUp : Up
 {
-    [SerializeField] private Player player;
-    [SerializeField] private float k;
+    private void Awake()
+    {
+        UpgradesName = "ReloadUp";
+        gameObject.SetActive(false);
+    }
 
     private void Update()
     {

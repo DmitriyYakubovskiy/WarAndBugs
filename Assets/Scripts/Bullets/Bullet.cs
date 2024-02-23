@@ -7,11 +7,12 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected GameObject damageEffect;
     [SerializeField] protected GameObject bloodSplash;
     [SerializeField] protected string[] tags;
-
-    protected float timeDieBullet=2;
+    [SerializeField] protected float timeDieBullet=2;
     
     public float speed;
     public float damage;
+
+    public float TimeDieBullet { get=>timeDieBullet; set => timeDieBullet=value; }
 
     protected virtual void Update()
     {

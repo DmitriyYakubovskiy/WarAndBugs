@@ -1,14 +1,14 @@
+using System;
+using System.Linq;
 using UnityEngine;
 
 public class ImprovementSystem : Sound
 {
-    [SerializeField] private GameObject[] gameObjects;
-    [SerializeField] private GameObject[] allGuns;
+    [SerializeField] private Up[] upgradeObjects;
     [SerializeField] private GameObject[] buttons;
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject player;
 
-    private int[] indexes=new int[3];
     private bool check=false;
 
     private void Update()
@@ -19,65 +19,41 @@ public class ImprovementSystem : Sound
         }
         if (panel.activeSelf && check != true)
         {
-            PlaySound(0,2);
+            PlaySound(0, 2);
             check = true;
-            System.Random random = new System.Random();
-            for (int i = 0; i < buttons.Length; i++)
+
+            for (int i = 0; i < upgradeObjects.Length; i++)
             {
                 buttons[i].SetActive(false);
             }
-            //if (player.GetComponent<Player>().Level % 10 == 0)
-            //{
-            //    indexes[0] = random.Next(0, availableGuns.Count);
-            //    indexes[1] = random.Next(0, availableGuns.Count);
-            //    while (indexes[1] == indexes[0])
-            //    {
-            //        indexes[1] = (indexes[1] + 1) % availableGuns.Count;
-            //    }
-            //    indexes[2] = random.Next(0, availableGuns.Count);
-            //    while (indexes[2] == indexes[1] || indexes[2] == indexes[0])
-            //    {
-            //        indexes[2] = (indexes[2] + 1) % availableGuns.Count;
-            //    }
-            //    for (int i = 0; i < indexes.Length; i++)
-            //    {
-            //        availableButtonsGuns[indexes[i]].SetActive(true);
-            //        availableButtonsGuns[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
-            //    }
-            //}
-            //else
-            //{
-                indexes[0] = random.Next(0, gameObjects.Length);
-                indexes[1] = random.Next(0, gameObjects.Length);
-                while (indexes[1] == indexes[0])
-                {
-                    indexes[1] = (indexes[1] + 1) % gameObjects.Length;
-                }
-                indexes[2] = random.Next(0, gameObjects.Length);
-                while (indexes[2] == indexes[1] || indexes[2] == indexes[0])
-                {
-                    indexes[2] = (indexes[2] + 1) % gameObjects.Length;
-                }
-                for (int i = 0; i < indexes.Length; i++)
-                {
-                    buttons[indexes[i]].SetActive(true);
-                    buttons[indexes[i]].GetComponent<RectTransform>().localPosition = new Vector3(0, 130 - 130 * i, 0);
-                }
-            //}
+            var nums = RandomExceptList(upgradeObjects.Length);
+            for(int i=0; i< 3; i++)
+            {
+                buttons[nums[i]].SetActive(true);
+            }
         }
     }
 
-    public void ButtonClick(int index)
+    public static int[] RandomExceptList(int count)
     {
-        //if (player.GetComponent<Player>().Level % 10 == 0)
-        //{
-        //}
-        //else
-        //{
-            gameObjects[index].gameObject.SetActive(true);
-        //}
+        var nums = Enumerable.Range(0, count).ToArray();
+        System.Random random = new System.Random();
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int randomIndex = random.Next(nums.Length);
+            int temp = nums[randomIndex];
+            nums[randomIndex] = nums[i];
+            nums[i] = temp;
+        }
+        return nums;
+    }
+
+    public void ButtonClick(string name)
+    {
+        upgradeObjects.FirstOrDefault(x => x.UpgradesName == name)?.gameObject.SetActive(true);
+        Pause.ContinueGame();
         check = false;
-        Pause.ContinueGame();           
         panel.SetActive(false); 
     }
 }
