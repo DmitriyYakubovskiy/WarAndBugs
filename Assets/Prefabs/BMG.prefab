@@ -48,14 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f942bef5a29a7824781695eeb240c373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: 70ffa6a84c7544245ab8d209f17d0ea6, type: 3}
+  volume: 0.02
   bullet: {fileID: 6154560366862959458, guid: e8996cdb9912ece40bd35e00a3439f5c, type: 3}
   WeaponFire: {fileID: 4214144353036093979}
   transformPoint: {fileID: 7951334042170267923}
   player: {fileID: 0}
-  name: BMG
+  namesGun: BMG
   startMainReloadTime: 3
   KSpeedPlayer: 0.7
   accuracy: 0
@@ -68,7 +70,7 @@ AudioSource:
   m_GameObject: {fileID: 2433469137542829922}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

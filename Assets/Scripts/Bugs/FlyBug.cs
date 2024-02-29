@@ -4,6 +4,7 @@ public class FlyBug : Bug
 {
     private void Update()
     {
+        Reposition();
         if (isDead)
         {
             RechargeTimeDead();

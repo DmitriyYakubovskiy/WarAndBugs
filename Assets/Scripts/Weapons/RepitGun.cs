@@ -16,6 +16,7 @@ public class RepitGun : Weapon
             {
                 RepitShot();
                 time = startMainReloadTime / player.KReload;
+                timeDelay = delay / player.KReload;
                 currentCount++;
                 return;
             }
@@ -42,7 +43,7 @@ public class RepitGun : Weapon
 
     private void RepitShot()
     {
-        PlaySound(0, 0.2f);
+        PlaySound(0, volume);
         WeaponFire.SetActive(true);
         Invoke("DisanabledWeaponFire", 0.1f);
         System.Random random = new System.Random();

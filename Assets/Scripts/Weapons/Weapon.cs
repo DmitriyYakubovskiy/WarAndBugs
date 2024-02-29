@@ -6,7 +6,7 @@ public class Weapon : Sound
     [SerializeField] protected GameObject WeaponFire;
     [SerializeField] protected Transform transformPoint;
     [SerializeField] protected Player player;
-    [SerializeField] protected string name;
+    [SerializeField] protected string namesGun;
     [SerializeField] protected float startMainReloadTime;
     [SerializeField] protected float KSpeedPlayer=1;
     [SerializeField] protected float accuracy=0;
@@ -14,16 +14,17 @@ public class Weapon : Sound
     protected SpriteRenderer spriteRenderer;
     protected bool flip=false;
     protected float time;
+    
 
     protected virtual void Awake()
     {
-        if (!PlayerPrefs.HasKey(name))
+        if (!PlayerPrefs.HasKey(namesGun))
         {
-            if (name == "Gun") PlayerPrefs.SetInt(name, 1);
-            else PlayerPrefs.SetInt(name, 0);
+            if (namesGun == "Gun") PlayerPrefs.SetInt(namesGun, 1);
+            else PlayerPrefs.SetInt(namesGun, 0);
         }
         if (!PlayerPrefs.HasKey("selectedGun")) PlayerPrefs.SetString("selectedGun", "Gun");
-        if (PlayerPrefs.GetString("selectedGun") != name) gameObject.SetActive(false);
+        if (PlayerPrefs.GetString("selectedGun") != namesGun) gameObject.SetActive(false);
         foreach (Transform child in transform.GetComponentsInChildren<Transform>())
         {
             if (child.gameObject.tag == "Sprite")
@@ -36,8 +37,6 @@ public class Weapon : Sound
 
     protected virtual void Update()
     {
-        if (Time.timeScale == 0) AudioPause();
-        else AudioStart();
         if (gameObject.activeSelf) player.KSpeedFromWeapon = KSpeedPlayer;
         if (Time.timeScale != 0)
         {
@@ -82,7 +81,7 @@ public class Weapon : Sound
         {
             if(Input.GetMouseButton(0))
             {
-                PlaySound(0,0.2f);
+                PlaySound(0, volume);
                 WeaponFire.SetActive(true);
                 Invoke("DisanabledWeaponFire", 0.1f);
                 System.Random random = new System.Random();

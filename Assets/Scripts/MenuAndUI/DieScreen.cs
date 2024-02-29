@@ -15,12 +15,10 @@ public class DieScreen : Sound
 
     private void Update()
     {
-        if (Time.timeScale == 0) AudioPause();
-        else AudioStart();
         if (check)
         {
             Invoke("ShowResultPanel", 3);
-            PlaySound(0);
+            PlaySound(0, volume);
             check = false;
         }
         Camera.main.orthographicSize = Mathf.MoveTowards(Camera.main.orthographicSize, 3f, 0.2f * Time.deltaTime);

@@ -15,7 +15,7 @@ public class ResultPanel : MonoBehaviour
         Pause.PauseGame();
         if (check)
         {
-            timeText.text = "Time: " + timer.GetStringTime();
+            timeText.text = LanguageManager.TranslateText("Time: ") + timer.GetStringTime();
             check = false;
         }
     }

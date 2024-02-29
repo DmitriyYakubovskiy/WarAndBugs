@@ -132,9 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835225bc950c92f44941a000dc233e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: 0c4ad4be02edd644d87c24487397bbb3, type: 3}
+  volume: 0.6
   BlowUpSprite: {fileID: 2612873007904346232}
   speed: 9
   timeBlownUp: 0.2
@@ -182,7 +184,7 @@ AudioSource:
   m_GameObject: {fileID: 7053060271915684184}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

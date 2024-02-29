@@ -3,6 +3,7 @@ using UnityEngine;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject settingsPanel;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class MenuScript : MonoBehaviour
         else
         {
             menuPanel.SetActive(false);
+            settingsPanel.SetActive(false);
             Pause.ContinueGame();
         }
     }

@@ -21,7 +21,7 @@ public class MultiShotGun : Weapon
         time -= Time.deltaTime;
         if (time > startMainReloadTime-startTimeAttack)
         {
-            AudioStart(0); 
+            AudioStart(0,volume); 
             WeaponFire.SetActive(true);
             if (Input.GetMouseButton(0) && timeDelay <= 0)
             {

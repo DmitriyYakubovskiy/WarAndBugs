@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScorpionBug : Bug
 {
@@ -8,6 +7,7 @@ public class ScorpionBug : Bug
 
     private void Update()
     {
+        Reposition();
         if (isDead)
         {
             RechargeTimeDead();
@@ -42,7 +42,7 @@ public class ScorpionBug : Bug
         {
             if (timeAttack <= 0)
             {
-                PlaySound(0);
+                PlaySound(0, volume);
                 Invoke("GetDamage", timeAttackAnimation - 0.25f);
                 timeAttack = startTimeAttack + timeAttackAnimation - 0.25f;
             }

@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dcf734d5af7384c9f1cd7c33ff6fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: d82470d9d45594345b7b15b55f023173, type: 3}
@@ -166,10 +167,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b8b8bd1295f55cb498d4479dce481236, type: 3}
   - soundArray:
     - {fileID: 8300000, guid: 257e23b6794f8ac419561c64a1e146a8, type: 3}
+  volume: 0.08
   hp: {fileID: 5133786830966211405}
   speed: 5.5
   lives: 53
   timeDeadAnimation: 1.2
+  isDead: 0
   expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
   money: 25
   exp: 130
@@ -283,7 +286,7 @@ AudioSource:
   m_GameObject: {fileID: 6124385873420436524}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

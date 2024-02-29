@@ -7,6 +7,11 @@ public static class Pause
     {
         if (Time.timeScale != 0)
         {
+            AudioSource[] audioSources = GameObject.FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+            for(int i=0;i<audioSources.Length;i++)
+            {
+                if (audioSources[i].isPlaying) audioSources[i].Pause();
+            }
             Time.timeScale = 0f;
         }
         IsPaused = true;
@@ -16,6 +21,11 @@ public static class Pause
     {
         if (Time.timeScale != 1)
         {
+            AudioSource[] audioSources = GameObject.FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+            for (int i = 0; i < audioSources.Length; i++)
+            {
+                if (!audioSources[i].isPlaying) audioSources[i].UnPause();
+            }
             Time.timeScale = 1f;
         }
         IsPaused = false;

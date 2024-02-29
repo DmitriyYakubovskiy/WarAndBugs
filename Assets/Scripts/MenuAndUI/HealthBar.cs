@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private GameObject gameObject;
+    [SerializeField] private GameObject barObject;
     [SerializeField] private RectTransform healthLine;
     private float maxHealth;
     private float fill=1;
@@ -19,11 +19,11 @@ public class HealthBar : MonoBehaviour
     {
         if (fill == 1f)
         {
-            gameObject.SetActive(false);
+            barObject.SetActive(false);
         }
         if (fill != 1f)
         {
-            gameObject.SetActive(true);
+            barObject.SetActive(true);
         }
 
         if (healthLine.GetComponent<Image>().fillAmount != fill)
@@ -42,6 +42,6 @@ public class HealthBar : MonoBehaviour
 
     public void DeleteHealthBar()
     {
-        Destroy(gameObject);
+        Destroy(barObject);
     }
 }

@@ -1,7 +1,10 @@
+using UnityEngine;
+
 public class TankBug : Bug
 {
     private void Update()
     {
+        Reposition();
         if (isDead)
         {
             RechargeTimeDead();

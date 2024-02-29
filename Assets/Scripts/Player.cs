@@ -30,7 +30,7 @@ public class Player : Entity
         set
         {
             level = value;
-            levelText.text ="LVL: "+level.ToString();
+            levelText.text = LanguageManager.TranslateText("LVL: ") +level.ToString();
             improvementSystem.SetActive(true);
             Entities = (int)Mathf.Round((float)(Entities * 1.1));
         }
@@ -56,6 +56,11 @@ public class Player : Entity
     public void GrenadeSetActive(bool b)
     {
         grenade.SetActive(b);
+    }
+
+    public bool GrenadeGetActive()
+    {
+        return grenade.gameObject.activeSelf;
     }
 
     private void Start()
@@ -104,7 +109,6 @@ public class Player : Entity
         rigidbody.velocity = moveVector;
     }
 
-
     private void OnDestroy()
     {
         if (PlayerPrefs.HasKey("money"))
@@ -112,8 +116,8 @@ public class Player : Entity
             Money += PlayerPrefs.GetInt("money");
         }
         PlayerPrefs.SetInt("money", Money);
-        resultPanel.levelText.text = "Level: " + Level;
-        resultPanel.killsText.text = "Kills: " + Kills;
+        resultPanel.levelText.text = LanguageManager.TranslateText("Level: ") + Level;
+        resultPanel.killsText.text = LanguageManager.TranslateText("Kills: ") + Kills;
         if(!diePanel.gameObject.IsDestroyed()) diePanel?.SetActive(true);
     }
 }

@@ -14,10 +14,15 @@ public abstract class Bug : Entity
     protected GameObject player;
     protected Vector2 playerPosition;
     protected float timeAttack;
-    protected float startTimeSearchPlayer= 0.2f;
-    protected float timeSearchPlayer=0;
+    protected float startTimeSearchPlayer = 0.2f;
+    protected float timeSearchPlayer = 0;
     protected float randomMoveTime = 0;
+    protected float liveTime = 0;
+    protected float startLiveTime=0;
     protected bool randomMove = false;
+
+    public const float MaxLiveTime = 6;
+    public const float MaxDistanceToPlayer = 14;
 
     protected override void Awake()
     {
@@ -39,11 +44,12 @@ public abstract class Bug : Entity
 
         hp.MaxHealth = Lives;
         var random = new System.Random();
+        startLiveTime = random.Next(2, (int)MaxLiveTime);
         startSpeed = speed;
         speed = (random.Next((int)((speed - speed / 4) * 100), (int)((speed + speed / 4) * 100))) / 100f;//+-25%
         materialHeal = Resources.Load("Materials/HealBlink", typeof(Material)) as Material;
         materialDamage = Resources.Load("Materials/DamageBlink", typeof(Material)) as Material;
-        materialDefault = spriteRenderer.material; 
+        materialDefault = spriteRenderer.material;
     }
 
     protected virtual void FixedUpdate()
@@ -75,6 +81,7 @@ public abstract class Bug : Entity
 
     public override void TakeDamage(float damage)
     {
+        liveTime = 0;
         if (lives <= 0) return;
         lives -= damage;
         spriteRenderer.material = materialDamage;
@@ -90,7 +97,7 @@ public abstract class Bug : Entity
             isDead = true;
             gameObject.GetComponent<Collider2D>().enabled = false;
             ResetDamageMaterial();
-            PlaySound(2);
+            PlaySound(2, volume);
             int value = Random.Range(1, 4);
             for (int i = 0; i < value; i++)
             {
@@ -100,13 +107,24 @@ public abstract class Bug : Entity
                 postion.z = 0;
                 var buf = Instantiate(expGameObject, transform.position + postion, transform.rotation);
                 buf.GetComponent<Exp>().ExpCount = exp / value;
-                buf.transform.localScale = new Vector3(expSize/Mathf.Pow(value,0.25f), expSize / Mathf.Pow(value, 0.25f));
+                buf.transform.localScale = new Vector3(expSize / Mathf.Pow(value, 0.25f), expSize / Mathf.Pow(value, 0.25f));
             }
         }
         else
         {
-            PlaySound(1);
+            PlaySound(1, volume);
             Invoke("ResetDamageMaterial", 0.1f);
+        }
+    }
+
+    protected void Reposition()
+    {
+        liveTime += Time.deltaTime;
+        if (liveTime > startLiveTime && Vector3.Distance(playerPosition, gameObject.transform.position) > MaxDistanceToPlayer)
+        {
+            gameObject.transform.position = SpawnSystem.GetNewPosition();
+            previousPosition = rigidbody.position;
+            liveTime = 0;
         }
     }
 
@@ -197,7 +215,7 @@ public abstract class Bug : Entity
 
     public virtual void GetDamage()
     {
-        PlaySound(0);
+        PlaySound(0,volume);
         if (playerForAttack != null) playerForAttack.GetComponent<Player>().TakeDamage(damage);
     }
 

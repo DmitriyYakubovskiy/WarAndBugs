@@ -131,14 +131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f942bef5a29a7824781695eeb240c373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: 0ed6a1d8cb032d949b0b9ea7a8ab69ee, type: 3}
+  volume: 0.02
   bullet: {fileID: 3042299607576206525, guid: 70e1c0c367036824fa613371c4ae841d, type: 3}
   WeaponFire: {fileID: 243955561223871996}
   transformPoint: {fileID: 6121579546292792698}
   player: {fileID: 0}
-  name: Gun
+  namesGun: Gun
   startMainReloadTime: 0.5
   KSpeedPlayer: 1
   accuracy: 0
@@ -151,7 +153,7 @@ AudioSource:
   m_GameObject: {fileID: 3232346538332727684}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

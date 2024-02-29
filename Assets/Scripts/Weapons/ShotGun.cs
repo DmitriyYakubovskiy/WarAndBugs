@@ -10,7 +10,7 @@ public class ShotGun : Weapon
         {
             if (Input.GetMouseButton(0))
             {
-                PlaySound(0);
+                PlaySound(0, volume);
                 WeaponFire.SetActive(true);
                 Invoke("DisanabledWeaponFire", 0.1f);
                 GameObject[] bullets=new GameObject[countBullets];

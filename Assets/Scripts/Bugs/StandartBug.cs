@@ -4,8 +4,7 @@ public class StandartBug : Bug
 {
     private void Update()
     {
-        if (Time.timeScale == 0) AudioPause();
-        else AudioStart();
+        Reposition();
         if (isDead)
         {
             RechargeTimeDead();

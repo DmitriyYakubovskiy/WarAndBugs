@@ -72,11 +72,11 @@ public class Entity : Sound
             isDead = true;
             gameObject.GetComponent<Collider2D>().enabled = false;
             ResetDamageMaterial();
-            PlaySound(2);
+            PlaySound(2, volume);
         }
         else
         {
-            PlaySound(1);
+            PlaySound(1, volume);
             Invoke("ResetDamageMaterial", 0.1f);
         }
     }
