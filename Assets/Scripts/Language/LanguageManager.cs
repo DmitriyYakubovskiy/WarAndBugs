@@ -16,7 +16,7 @@ public class LanguageManager : MonoBehaviour
         {"Exit", "Выйти"},
         {"Select", "Выбрать" },
         {"Buy", "Купить" },
-        {"Guns", "Пушки" },
+        {"Guns", "Оружие" },
         {"Other", "Другое" },
         {"Upgrade", "Улучшить" },
         {"Time: ", "Время: " },
@@ -30,12 +30,14 @@ public class LanguageManager : MonoBehaviour
         {"Continue", "Продолжить" },
         {"To menu", "Меню" },
         {"Level Up!", "Новый уровень!" },
-        {"HeatPoint\n+ 10%", "Жизни\r\n+ 10%" },
+        {"HeatPoint\n+ 10%", "Здоровье\r\n+ 10%" },
         {"Reload\n- 5%", "Перезарядка\r\n- 5%" },
         {"Damage\n+ 5%", "Урон\r\n+ 5%" },
-        {"Move speed\n+ 3%", "Скорость движения\r\n+ 3%" },
+        {"Move speed\n+ 3%", "Бег\r\n+ 3%" },
         {"Audio", "Аудио" },
-        {"Language", "Язык"}
+        {"Language", "Язык"},
+        {"Max Level", "Макс. Урв."},
+        {"LVL: 1", "УРВ: 1"}
     };
 
     private TextMeshProUGUI[] texts;

@@ -281,7 +281,7 @@ MonoBehaviour:
   namesGun: Arc
   startMainReloadTime: 4
   KSpeedPlayer: 1
-  accuracy: 0
+  accuracy: 1
   startTimeAttack: 2
   delay: 0.01
 --- !u!82 &8724900356699569102

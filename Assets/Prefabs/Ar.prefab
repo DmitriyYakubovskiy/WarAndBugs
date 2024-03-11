@@ -271,7 +271,7 @@ MonoBehaviour:
   namesGun: Ar
   startMainReloadTime: 0.3
   KSpeedPlayer: 1.1
-  accuracy: 0.3
+  accuracy: 1
 --- !u!1 &4793224423201770150
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,9 @@ public class Player : Entity
     [SerializeField] private ExpBar expBar;
     [SerializeField] private MoneyView moneyView;
     private int money = 0;
-    private int level=1;
+    private int level = 1;
     private float exp;
+    private string currentLanguage;
 
     public float Exp
     {
@@ -30,7 +31,7 @@ public class Player : Entity
         set
         {
             level = value;
-            levelText.text = LanguageManager.TranslateText("LVL: ") +level.ToString();
+            levelText.text = LanguageManager.TranslateText("LVL: ") + level.ToString();
             improvementSystem.SetActive(true);
             Entities = (int)Mathf.Round((float)(Entities * 1.1));
         }
@@ -65,6 +66,7 @@ public class Player : Entity
 
     private void Start()
     {
+        currentLanguage=LanguageManager.curretLanguage;
         hp.MaxHealth=Lives;
     }
 
@@ -107,6 +109,15 @@ public class Player : Entity
         moveVector = moveVector.normalized;
         moveVector = moveVector * (speed * KSpeed * KSpeedFromWeapon);
         rigidbody.velocity = moveVector;
+    }
+
+    private void UpdateText()
+    {
+        if (LanguageManager.curretLanguage != currentLanguage)
+        {
+            levelText.text = LanguageManager.TranslateText("LVL: ") + level.ToString();
+            currentLanguage = LanguageManager.curretLanguage;
+        }
     }
 
     private void OnDestroy()
