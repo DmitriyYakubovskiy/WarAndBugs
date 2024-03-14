@@ -23,7 +23,8 @@ public class Sound : MonoBehaviour
     public void PlaySound(int i, float volume = 1f, float p1 = 0.85f, float p2 = 1.2f, bool isDestroyed=false)
     {
         if (mixerGroup.name == "None") Debug.Log(gameObject.name);
-        AudioClip clip = sounds[i].soundArray[Random.Range(0, sounds[i].soundArray.Length)];
+        int index = Random.Range(0, sounds[i].soundArray.Length);
+        AudioClip clip = sounds[i].soundArray[index];
         audioSrc.pitch = Random.Range(p1, p2);
         if (isDestroyed)
         {

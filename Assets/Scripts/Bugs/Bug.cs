@@ -8,6 +8,10 @@ public abstract class Bug : Entity
     [SerializeField] protected float damage;
     [SerializeField] protected float startTimeAttack;
     [SerializeField] protected float timeAttackAnimation;
+    [SerializeField] protected float timeLive = 0;
+    [SerializeField] protected bool randomSpeedMove = false;
+    [SerializeField] protected bool isReplaced = false;
+    [SerializeField] protected bool isTemporary = false;
     [SerializeField] private float expSize = 1;
 
     protected GameObject playerForAttack = null;
@@ -17,12 +21,12 @@ public abstract class Bug : Entity
     protected float startTimeSearchPlayer = 0.2f;
     protected float timeSearchPlayer = 0;
     protected float randomMoveTime = 0;
-    protected float liveTime = 0;
+    protected float replaceTime = 0;
     protected float startLiveTime=0;
     protected bool randomMove = false;
 
-    public const float MaxLiveTime = 6;
-    public const float MaxDistanceToPlayer = 14;
+    public const float MaxReplaceTime = 6;
+    public const float MaxDistanceToPlayer = 18;
 
     protected override void Awake()
     {
@@ -44,9 +48,9 @@ public abstract class Bug : Entity
 
         hp.MaxHealth = Lives;
         var random = new System.Random();
-        startLiveTime = random.Next(2, (int)MaxLiveTime);
+        startLiveTime = random.Next(2, (int)MaxReplaceTime);
         startSpeed = speed;
-        speed = (random.Next((int)((speed - speed / 4) * 100), (int)((speed + speed / 4) * 100))) / 100f;//+-25%
+        if (randomSpeedMove) speed = (random.Next((int)((speed - speed / 4) * 100), (int)((speed + speed / 4) * 100))) / 100f;//+-25%
         materialHeal = Resources.Load("Materials/HealBlink", typeof(Material)) as Material;
         materialDamage = Resources.Load("Materials/DamageBlink", typeof(Material)) as Material;
         materialDefault = spriteRenderer.material;
@@ -79,36 +83,36 @@ public abstract class Bug : Entity
         previousPosition = rigidbody.position;
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, bool bonus=true)
     {
-        liveTime = 0;
+        replaceTime = 0;
         if (lives <= 0) return;
         lives -= damage;
         spriteRenderer.material = materialDamage;
 
         if (lives <= 0)
         {
-            if (player != null)
+            if (player != null && bonus==true)
             {
                 player.GetComponent<Player>().Kills++;
                 player.GetComponent<Player>().Money += money;
+                int value = Random.Range(1, 4);
+                for (int i = 0; i < value; i++)
+                {
+                    Vector3 postion = new Vector3();
+                    postion.x = Random.Range(-3, 4) / 10f;
+                    postion.y = Random.Range(-3, 4) / 10f;
+                    postion.z = 0;
+                    var buf = Instantiate(expGameObject, transform.position + postion, transform.rotation);
+                    buf.GetComponent<Exp>().ExpCount = exp / value;
+                    buf.transform.localScale = new Vector3(expSize / Mathf.Pow(value, 0.25f), expSize / Mathf.Pow(value, 0.25f));
+                }
             }
             lives = 0;
             isDead = true;
             gameObject.GetComponent<Collider2D>().enabled = false;
             ResetDamageMaterial();
             PlaySound(2, volume);
-            int value = Random.Range(1, 4);
-            for (int i = 0; i < value; i++)
-            {
-                Vector3 postion = new Vector3();
-                postion.x = Random.Range(-3, 4) / 10f;
-                postion.y = Random.Range(-3, 4) / 10f;
-                postion.z = 0;
-                var buf = Instantiate(expGameObject, transform.position + postion, transform.rotation);
-                buf.GetComponent<Exp>().ExpCount = exp / value;
-                buf.transform.localScale = new Vector3(expSize / Mathf.Pow(value, 0.25f), expSize / Mathf.Pow(value, 0.25f));
-            }
         }
         else
         {
@@ -119,12 +123,12 @@ public abstract class Bug : Entity
 
     protected void Reposition()
     {
-        liveTime += Time.deltaTime;
-        if (liveTime > startLiveTime && Vector3.Distance(playerPosition, gameObject.transform.position) > MaxDistanceToPlayer)
+        replaceTime += Time.deltaTime;
+        if (replaceTime > startLiveTime && Vector3.Distance(playerPosition, gameObject.transform.position) > MaxDistanceToPlayer)
         {
             gameObject.transform.position = SpawnSystem.GetNewPosition();
             previousPosition = rigidbody.position;
-            liveTime = 0;
+            replaceTime = 0;
         }
     }
 
@@ -185,6 +189,19 @@ public abstract class Bug : Entity
                 moveVector.y = 0;
             }
             return;
+        }
+    }
+
+    protected virtual void RechargeTimeLive()
+    {
+        if (timeLive > 0)
+        {
+            timeLive -= Time.deltaTime;
+        }
+        else
+        {
+            isDead = true;
+            TakeDamage(Lives,false);
         }
     }
 

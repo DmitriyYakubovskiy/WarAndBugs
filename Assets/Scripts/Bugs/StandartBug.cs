@@ -4,7 +4,8 @@ public class StandartBug : Bug
 {
     private void Update()
     {
-        Reposition();
+        if (isReplaced) Reposition();
+        if (isTemporary) RechargeTimeLive();
         if (isDead)
         {
             RechargeTimeDead();

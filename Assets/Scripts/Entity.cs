@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Entity : Sound
 {   
@@ -60,7 +61,7 @@ public class Entity : Sound
         materialDefault = spriteRenderer.material;
     }
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage, bool bonus = true)
     {
         if (lives <= 0) return;
         lives -= damage;
