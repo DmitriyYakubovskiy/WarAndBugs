@@ -17,7 +17,7 @@ public class StandartBug : Bug
             RechargeTimeAttack();
             AiLogics();
         }
-        DistanceToPlayer();
+        PlayerPosition();
         Move(true);
         hp.ShowHealth(this);
     }

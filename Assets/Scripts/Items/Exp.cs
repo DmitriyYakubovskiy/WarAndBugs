@@ -71,7 +71,7 @@ public class Exp : Item
         {
             if (Check)
             {
-                ////PlaySound(0);dead=true
+                PlaySound(0,volume,isDestroyed:true);
                 player.Exp += ExpCount;
                 Destroy(gameObject);
             }

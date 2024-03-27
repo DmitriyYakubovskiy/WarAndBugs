@@ -39,7 +39,7 @@ AudioMixerController:
     name: MainVol
   - guid: 390b772550d899f41a26d5265027fbe5
     name: MasterVol
-  - guid: f0ad28db2201bd24ba4120555e39fc02
+  - guid: fe836476ebd494740ba8c69eb71fc850
     name: MusicVol
   m_AudioMixerGroupViews:
   - guids:
@@ -96,6 +96,7 @@ AudioMixerSnapshotController:
   m_FloatValues:
     f5f854225228f474aa4c12dbbaa0191f: -80
     0dff3393830fbf04cb8a6dea6c945811: -13
+    fe836476ebd494740ba8c69eb71fc850: -0.7
   m_TransitionOverrides: {}
 --- !u!244 &3864892992507255074
 AudioMixerEffectController:

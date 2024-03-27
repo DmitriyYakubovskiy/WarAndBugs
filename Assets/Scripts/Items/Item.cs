@@ -19,6 +19,7 @@ public class Item : Sound
 
     protected virtual void Update()
     {
+        if (player == null) return;
         liveTime += Time.deltaTime;
         if (liveTime > MaxLifeTime && Vector3.Distance(player.transform.position, gameObject.transform.position) > MaxDistanceToPlayer)
         {

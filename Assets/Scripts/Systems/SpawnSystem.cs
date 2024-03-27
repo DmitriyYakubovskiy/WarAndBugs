@@ -1,16 +1,19 @@
+using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SpawnSystem : MonoBehaviour
 {
     [SerializeField] private GameObject[] aiEntity;
     [SerializeField] private GameObject[] events;
+    [SerializeField] private GameObject[] bosses;
     [SerializeField] private float startTime;
     [SerializeField] private float rangeTop;
     [SerializeField] private float rangeRight;    
     [SerializeField] private float rangeBottom;
     [SerializeField] private float rangeLeft;
 
+    private float timeBoss = 0;
     private float time = 0;
     private float timeHealth = 0f;
     private float timeLeftHealthMax = 0f;
@@ -19,10 +22,15 @@ public class SpawnSystem : MonoBehaviour
 
     private static Player player;
     private static int range = 25;
+    private static int distanseToPlayer = 20;
     private static float RangeTop { get; set; }
     private static float RangeRight { get; set; }
     private static float RangeBottom { get; set; }
     private static float RangeLeft { get; set; }
+
+    public bool IsBossStage { get; set; }
+    public static int aliveBugs=0;
+    public static int levelBugs=1;
 
     private void Awake()
     {
@@ -35,11 +43,17 @@ public class SpawnSystem : MonoBehaviour
 
     private void Update()
     {
+        if (aliveBugs > 50 * levelBugs)
+        {
+            startTime *= 2;
+            levelBugs += 1;
+        }
         timeHealth += Time.deltaTime;
         timeLeftHealthMax += Time.deltaTime;
         timeLeftGrenade += Time.deltaTime;
-        timeEvents += Time.deltaTime;   
-        if (Mathf.FloorToInt(timeHealth / 61)==1)
+        timeEvents += Time.deltaTime;
+        timeBoss += Time.deltaTime;
+        if (Mathf.FloorToInt(timeHealth / 61) == 1)
         {
             startTime *= 0.91f;
             SpawnEntity(aiEntity[0]);
@@ -50,47 +64,67 @@ public class SpawnSystem : MonoBehaviour
             SpawnEntity(aiEntity[1]);
             timeLeftHealthMax = 0;
         }
-        if (Mathf.FloorToInt(timeLeftGrenade / 106) == 1 && PlayerPrefs.GetInt("Grenade")!=0)
+        if (Mathf.FloorToInt(timeLeftGrenade / 36) == 1 && PlayerPrefs.GetInt("Grenade") != 0)
         {
             SpawnEntity(aiEntity[2]);
             timeLeftGrenade = 0;
         }
-        if (Mathf.FloorToInt(timeEvents / 57) == 1)
+        if (Mathf.FloorToInt(timeBoss / 600) >= 1 && player.Level>30 && IsBossStage == false)
+        {
+            IsBossStage = true;
+            Invoke("SpawnBoss", 20f);
+            timeBoss = 0;    
+        }
+        if (Mathf.FloorToInt(timeEvents / 49) == 1 && IsBossStage==false)
         {
             SpawnEvent();
             timeEvents = 0;
         }
-        if (RechargeTimeSpawn())
+        if (RechargeTimeSpawn() && IsBossStage == false)
         {
             ChooseRandomEntity();
+            aliveBugs += 1;
             time = startTime;
         }
     }
 
+    private void SpawnBoss()
+    {
+        SpawnEntity(bosses[0]);
+    }
+
     private void SpawnEvent()
     {
-        int index = UnityEngine.Random.Range(0, events.Length);
+        int index = 0;
+        if(player.Level>5) index = UnityEngine.Random.Range(0, 2);
+        if (player.Level > 7) index = UnityEngine.Random.Range(0, 6);
+        if (player.Level > 10) index = UnityEngine.Random.Range(0, 7);
+
         GameObject entity = Instantiate(events[index]);
-        if(index==0) entity.transform.position = new Vector3((RangeLeft+RangeRight)/2, RangeTop*2, 0);
+
+        if (index == 0) entity.transform.position = new Vector3((RangeLeft+rangeRight)/2+UnityEngine.Random.Range(-5, 5), RangeTop * 2, 0);
         if (index == 1)
         {
             entity.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
             for (int i = 0; i < entity.transform.childCount; i++)
             {
-                Debug.Log(i);
                 entity.transform.GetChild(i).position = new Vector3(entity.transform.GetChild(i).position.x, entity.transform.GetChild(i).position.y,0);
                 if (entity.transform.GetChild(i).position.x > RangeRight || entity.transform.GetChild(i).position.x < RangeLeft
                     || entity.transform.GetChild(i).position.y > RangeTop || entity.transform.GetChild(i).position.y < RangeBottom) Destroy(entity.transform.GetChild(i).gameObject);
             }
         }
-        if (index == 2) entity.transform.position = GetNewPosition();
+        if (index == 2) entity.transform.position = new Vector3(player.transform.position.x - distanseToPlayer, player.transform.position.y, 0);
+        if (index == 3) entity.transform.position = new Vector3(player.transform.position.x + distanseToPlayer, player.transform.position.y, 0);
+        if (index == 4) entity.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + distanseToPlayer, 0);
+        if (index == 5) entity.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - distanseToPlayer, 0);
+        if (index == 6) entity.transform.position = GetNewPosition();
     }
 
     public static Vector2 GetNewPosition()
     {
         Vector2 playerPosition = player == null ? new Vector2(0, 0) : player.transform.position;
-        int positionX = Random.Range((int)playerPosition.x - 18, (int)playerPosition.x + 18);
-        int positionY = Random.Range((int)playerPosition.y - 18, (int)playerPosition.y + 18);
+        int positionX = UnityEngine.Random.Range((int)playerPosition.x - distanseToPlayer, (int)playerPosition.x + distanseToPlayer);
+        int positionY = UnityEngine.Random.Range((int)playerPosition.y - distanseToPlayer, (int)playerPosition.y + distanseToPlayer);
 
         while (DoteInScreen(new Vector2(positionX, positionY)))
         {
@@ -146,7 +180,7 @@ public class SpawnSystem : MonoBehaviour
     private static bool DoteInScreen(Vector2 vector)
     {
         Vector2 playerPosition = player == null ? new Vector2(0, 0) : player.transform.position;
-        Rect rect = new Rect(playerPosition.x-13, playerPosition.y-11,26,22);
+        Rect rect = new Rect(playerPosition.x-16, playerPosition.y-14,32,28);
         if (rect.Contains(vector)) return true;
         return false;
     }
@@ -162,6 +196,16 @@ public class SpawnSystem : MonoBehaviour
     {
         Vector2 vector = GetNewPosition();
         GameObject entity = Instantiate(gameObject);
+        if (entity.tag=="Enemy") entity.GetComponent<Bug>().UpgradeCharacteristics(levelBugs);
         entity.transform.position = new Vector3(vector.x, vector.y, 0);
+    }
+
+    public async void SpawnEntities(int counts)
+    {
+        for(int i = 0; i < counts; i++)
+        {
+            ChooseRandomEntity();
+            await Task.Delay(1000);
+        }
     }
 }

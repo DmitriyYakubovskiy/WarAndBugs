@@ -14,7 +14,7 @@ public class SuperShotGun : ShotGun
             {
                 PlaySound(0, volume);
                 WeaponFire.SetActive(true);
-                Invoke("DisanabledWeaponFire", 0.1f);
+                Invoke("DisanabledWeaponFire", 0.1f < startMainReloadTime ? 0.1f : startMainReloadTime / 2);
                 GameObject[] bullets = new GameObject[countBullets];
                 for (int i = 0; i < countBullets; i++)
                 {

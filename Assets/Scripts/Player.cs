@@ -94,6 +94,18 @@ public class Player : Entity
         previousPosition = rigidbody.position;
     }
 
+    private float timeMove;
+    [SerializeField] private float startTimeMove;
+    private void PlaySoundMove(int index)
+    {
+        timeMove-=Time.deltaTime;
+        if (timeMove <= 0)
+        {
+            PlaySound(index, volume, isDestroyed: true);
+            timeMove = 0;
+        }
+    }
+
     protected override void Move(bool b)
     {
         var dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -101,22 +113,13 @@ public class Player : Entity
         else if (moveVector.x < dir.x && b == false) SetFlip(false);
         if (moveVector.x > dir.x && b == true) SetAngles(true);
         else if (moveVector.x < dir.x && b == true) SetAngles(false);
-        //if (moveVector.x < 0 && b == false) SetFlip(true);
-        //else if (moveVector.x > 0 && b == false) SetFlip(false);
-        //if (moveVector.x < 0 && b == true) SetAngles(true);
-        //else if (moveVector.x > 0 && b == true) SetAngles(false);
 
         moveVector = moveVector.normalized;
         moveVector = moveVector * (speed * KSpeed * KSpeedFromWeapon);
         rigidbody.velocity = moveVector;
-    }
-
-    private void UpdateText()
-    {
-        if (LanguageManager.curretLanguage != currentLanguage)
+        if(moveVector.x != 0 || moveVector.y!=0) 
         {
-            levelText.text = LanguageManager.TranslateText("LVL: ") + level.ToString();
-            currentLanguage = LanguageManager.curretLanguage;
+            //PlaySoundMove();
         }
     }
 

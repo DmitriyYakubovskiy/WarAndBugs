@@ -6,9 +6,9 @@ public class GrenadeItem : Item
     {
         if (collision.tag == "Player")
         {
-            //PlaySound(0, isDestroyed: true);
             if (!collision.gameObject.GetComponent<Player>().GrenadeGetActive())
             {
+                PlaySound(0, volume, isDestroyed: true);
                 collision.gameObject.GetComponent<Player>().GrenadeSetActive(true);
                 Destroy(gameObject);
             }

@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -1218345896, guid: cb0caa654666a104181179996b00f64e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8227843091066555666
 Transform:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4381537150681113985}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.28359997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   WeaponFire: {fileID: 8765783826049390579}
   transformPoint: {fileID: 6851479497296099024}
   player: {fileID: 0}
-  namesGun: ShotGun
+  nameGun: ShotGun
   startMainReloadTime: 2
   KSpeedPlayer: 1.2
   accuracy: 1

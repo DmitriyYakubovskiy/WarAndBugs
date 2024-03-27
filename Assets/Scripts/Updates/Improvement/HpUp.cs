@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class HpUp : Up
 {
     private void Awake()

@@ -1,0 +1,1021 @@
+fileFormatVersion: 2
+guid: 52b7313a0e9fbe14aab2d0153de5d588
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 19
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mommy_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 483
+        width: 64
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 0, z: 6, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baf4d7922c10ac47be4300c7d901bc4
+      internalID: -1423693927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 481
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297c30e47eca34040aa767bae0697712
+      internalID: 317726971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 482
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e25fc4c967200f43a4b3de1e19626ef
+      internalID: 652895669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_3
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 482
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a620d5d0421f0ed47b4d8f5bb0e72978
+      internalID: -1447843474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 482
+        width: 64
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 0, z: 6, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e10997894fcd46498621b45915bbb3e
+      internalID: 1799261438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_5
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 481
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903cf04b89a0bd140894a934cfb427c8
+      internalID: 1296771465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_6
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 481
+        width: 49
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac299e359f2df84e9d30733ca796f05
+      internalID: -1773396657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_7
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 482
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006b835198395d34fb9dae3c0b3cda77
+      internalID: -1954091278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 386
+        width: 65
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5033637, y: 0.4788392}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50a6859234717c4ea744822994c68d1
+      internalID: 2125496337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 386
+        width: 74
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5605343, y: 0.47871217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1338bd2acbe87834d9b951538da89bfe
+      internalID: -999087672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 386
+        width: 75
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5674823, y: 0.4778288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a472a6977b561654a9ae69a276077334
+      internalID: 511608584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_11
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 386
+        width: 66
+        height: 93
+      alignment: 9
+      pivot: {x: 0.49823415, y: 0.4775276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5181ed56ae53d9408191527f90fc08d
+      internalID: -684989057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_12
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 386
+        width: 65
+        height: 93
+      alignment: 9
+      pivot: {x: 0.50305974, y: 0.4796825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43890ba1a3f317449d8371c1553e76e
+      internalID: -2048609630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 290
+        width: 63
+        height: 91
+      alignment: 9
+      pivot: {x: 0.54673386, y: 0.48873934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeee0b5716abb6b4b896000ec7f33418
+      internalID: -661655104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 289
+        width: 75
+        height: 92
+      alignment: 9
+      pivot: {x: 0.5546623, y: 0.4935754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e74547d1a66774b8b6af125538b406
+      internalID: 635193082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 289
+        width: 64
+        height: 91
+      alignment: 9
+      pivot: {x: 0.5324054, y: 0.48837113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d33d9c3bdb47e44bc083c39094e9ea
+      internalID: 1562630515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 289
+        width: 83
+        height: 92
+      alignment: 9
+      pivot: {x: 0.6021361, y: 0.49468762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57269c65fbfb4047b8ea7abff8b9058
+      internalID: 1510512784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_17
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 289
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b89fe88d0532af4f89d36a5337f7d63
+      internalID: -39684875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_18
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 291
+        width: 86
+        height: 94
+      alignment: 9
+      pivot: {x: 0.62835693, y: 0.47317505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eef8de71d9168a48b6c05c37bee6688
+      internalID: -90455457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_19
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 195
+        width: 71
+        height: 87
+      alignment: 9
+      pivot: {x: 0.4888491, y: 0.5045499}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448f2aa7a28fd164398ab052a82df1e6
+      internalID: -965616805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 193
+        width: 65
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5060899, y: 0.52957505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3f06be58fcf7840af7a40a995e23d5
+      internalID: -1410141821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 193
+        width: 78
+        height: 95
+      alignment: 9
+      pivot: {x: 0.5406001, y: 0.48541597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898c503a5b2f71f4c99d64a0e0e971b9
+      internalID: -926314817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 193
+        width: 78
+        height: 96
+      alignment: 9
+      pivot: {x: 0.52537495, y: 0.47113577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd080aacfe743764bb31063234086520
+      internalID: -2044376184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_23
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 193
+        width: 77
+        height: 95
+      alignment: 9
+      pivot: {x: 0.53598654, y: 0.48541597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c9dea451ce61643a6e775bf4d00151
+      internalID: 719503517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 98
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855d759de36067f42a7dde182653b8c1
+      internalID: 2058303838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 97
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc0a5eabf26ee445983b02c777eb33a
+      internalID: -1778965856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_26
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 98
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa010a119856f44b9591b4673ed7852
+      internalID: -1434232658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_27
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 98
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78d093a2c30e32489ec7112e434ad7d
+      internalID: -1823703979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 95
+        height: 92
+      alignment: 9
+      pivot: {x: 0.4297852, y: 0.505179}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1572fdd7bfd214946804b9d5e9927351
+      internalID: 77090326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48fac939c4457b44b0d0c0b6a58f785
+      internalID: 396757337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_30
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93e23e39bff51d4386b7b655a1279c0
+      internalID: -929081748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_31
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617e614ba37b8a64291e7b2a9bf5a974
+      internalID: -1916052681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_32
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c81ef065336684d87358e2250b1f79
+      internalID: 1961360703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_33
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4193177aa7f66c64b87c6edb043cce2d
+      internalID: 1203479497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_34
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874b0bc2754aba74693c783944b65818
+      internalID: 1517781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_35
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebfc76f9ad31a6418b12477c28b2adf
+      internalID: 90514110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_36
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9149fa0acbd9cd844a3b22e3306bf8e0
+      internalID: -432077682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_37
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f287d049fbffa274db8b5031eda8ead6
+      internalID: 1387058563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_38
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 0
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2136dd3f02d90946b61a4d3f06489bf
+      internalID: -94180868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mommy_39
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 0
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1975499579f3cc458ca466177797f3f
+      internalID: 721857117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mommy_0: -1423693927
+      Mommy_1: 317726971
+      Mommy_10: 511608584
+      Mommy_11: -684989057
+      Mommy_12: -2048609630
+      Mommy_13: -661655104
+      Mommy_14: 635193082
+      Mommy_15: 1562630515
+      Mommy_16: 1510512784
+      Mommy_17: -39684875
+      Mommy_18: -90455457
+      Mommy_19: -965616805
+      Mommy_2: 652895669
+      Mommy_20: -1410141821
+      Mommy_21: -926314817
+      Mommy_22: -2044376184
+      Mommy_23: 719503517
+      Mommy_24: 2058303838
+      Mommy_25: -1778965856
+      Mommy_26: -1434232658
+      Mommy_27: -1823703979
+      Mommy_28: 77090326
+      Mommy_29: 396757337
+      Mommy_3: -1447843474
+      Mommy_30: -929081748
+      Mommy_31: -1916052681
+      Mommy_32: 1961360703
+      Mommy_33: 1203479497
+      Mommy_34: 1517781
+      Mommy_35: 90514110
+      Mommy_36: -432077682
+      Mommy_37: 1387058563
+      Mommy_38: -94180868
+      Mommy_39: 721857117
+      Mommy_4: 1799261438
+      Mommy_40: 1723504799
+      Mommy_5: 1296771465
+      Mommy_6: -1773396657
+      Mommy_7: -1954091278
+      Mommy_8: 2125496337
+      Mommy_9: -999087672
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

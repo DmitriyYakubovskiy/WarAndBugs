@@ -1,53 +1,38 @@
 using TMPro;
 using UnityEngine;
-using System.Linq;
 
 public class BuySystem : MonoBehaviour
 {
     [SerializeField] private ShopItem[] gunItems;
-    [SerializeField] private ShopOtherItem[] otherItems;
+    [SerializeField] private ShopItemWithLevel[] otherItems;
+    [SerializeField] private ShopItemWithLevelAndSelect[] droneItems;
     [SerializeField] private TextMeshProUGUI moneyText;
 
-    public void SetButtonSelectInteractable(int id,bool b)
+    private void Start()
     {
-        gunItems[id].SetButtonSelectInteractable(b);
+        UpdateGunButtons();
+        UpdateOtherButtons();
     }
 
-    public void SetButtonBuy(string name)
-    {
-        gunItems.FirstOrDefault(x => x.NamesItem == name)?.Buy();
-    }
-
-    public void SetButtonSelect(string name)
-    {
-        gunItems.FirstOrDefault(x => x.NamesItem == name)?.Select();
-    }
-
-    public void SetButtonSelectInteractable(string name, bool b)
-    {
-        gunItems.FirstOrDefault(x => x.NamesItem == name)?.SetButtonSelectInteractable(b);
-    }
-
-    public void SetButtonBuyInteractable(int id, bool b)
-    {
-        gunItems[id].SetButtonBuyInteractable(b);
-    }
-
-    public void UpdateButtonsAndMoney()
+    private int UpdateMoney()
     {
         if (!PlayerPrefs.HasKey("money")) PlayerPrefs.SetInt("money", 0);
         int money = PlayerPrefs.GetInt("money");
         moneyText.text = money.ToString();
-        if (!PlayerPrefs.HasKey("Gun")) SetButtonBuy("Gun");
-        if (!PlayerPrefs.HasKey("selectedGun")) SetButtonSelect("Gun");
+        return money;
+    }
+
+    public void UpdateGunButtons()
+    {
+        int money = UpdateMoney();
         for (int i = 0; i < gunItems.Length; i++)
         {
             gunItems[i].SetButtonBuyInteractable(false);
-            if (PlayerPrefs.GetInt(gunItems[i].NamesItem) == 1)
+            if (PlayerPrefs.GetInt(gunItems[i].NameItem) == 1)
             {
                 gunItems[i].SetButtonSelectInteractable(true);
                 gunItems[i].SetButtonBuyInteractable(false);
-                if (PlayerPrefs.GetString("selectedGun") == gunItems[i].NamesItem) gunItems[i].SetButtonSelectInteractable(false);
+                if (PlayerPrefs.GetString(gunItems[i].SelectedItemName) == gunItems[i].NameItem) gunItems[i].SetButtonSelectInteractable(false);
             }
             else
             {
@@ -55,12 +40,37 @@ public class BuySystem : MonoBehaviour
                 gunItems[i].SetButtonBuyInteractable(true);
                 if (gunItems[i].Cost > money) gunItems[i].SetButtonBuyInteractable(false);
             }
+            if (gunItems[i].NameItem=="Gun") gunItems[i].SetButtonBuyInteractable(false);
         }
-        for(int i= 0; i<otherItems.Length; i++)
+    }
+
+    public void UpdateOtherButtons()
+    {
+        int money = UpdateMoney();
+        for (int i = 0; i < droneItems.Length; i++)
+        {
+            droneItems[i].RecalculateTheCost();
+            droneItems[i].ChangeLevel();
+            droneItems[i].SetButtonBuyInteractable(false);
+            if (PlayerPrefs.GetInt(droneItems[i].NameItem) >= 1)
+            {
+                droneItems[i].SetButtonSelectInteractable(true);
+                if (droneItems[i].Cost > money || droneItems[i].Level >= droneItems[i].GetMaxLevel()) droneItems[i].SetButtonBuyInteractable(false);
+                else droneItems[i].SetButtonBuyInteractable(true);
+                if (PlayerPrefs.GetString(droneItems[i].SelectedItemName) == droneItems[i].NameItem) droneItems[i].SetButtonSelectInteractable(false);
+            }
+            else
+            {
+                droneItems[i].SetButtonSelectInteractable(false);
+                droneItems[i].SetButtonBuyInteractable(true);
+                if (droneItems[i].Cost > money) droneItems[i].SetButtonBuyInteractable(false);
+            }
+        }
+        for (int i = 0; i < otherItems.Length; i++)
         {
             otherItems[i].RecalculateTheCost();
             otherItems[i].ChangeLevel();
-            if (otherItems[i].Cost > money && otherItems[i].Level < ShopOtherItem.MAX_LEVEL) otherItems[i].SetButtonBuyInteractable(false);
+            if (otherItems[i].Cost > money || otherItems[i].Level >= otherItems[i].GetMaxLevel()) otherItems[i].SetButtonBuyInteractable(false);
             else otherItems[i].SetButtonBuyInteractable(true);
         }
     }
@@ -69,11 +79,7 @@ public class BuySystem : MonoBehaviour
     {
         int money = PlayerPrefs.GetInt("money") + 100;
         PlayerPrefs.SetInt("money", money);
-        UpdateButtonsAndMoney();
-    }
-
-    public void OnEnable()
-    {
-        UpdateButtonsAndMoney();
+        UpdateGunButtons();
+        UpdateOtherButtons();
     }
 }

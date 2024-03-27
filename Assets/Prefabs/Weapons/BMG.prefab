@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1889715296714769251
 Transform:
   m_ObjectHideFlags: 0
@@ -53,12 +53,12 @@ MonoBehaviour:
   - soundArray:
     - {fileID: 8300000, guid: 70ffa6a84c7544245ab8d209f17d0ea6, type: 3}
   volume: 0.02
-  bullet: {fileID: 6154560366862959458, guid: e8996cdb9912ece40bd35e00a3439f5c, type: 3}
+  bullet: {fileID: 929550092267090712, guid: fe97461d2b3aec940b634b77e22efa63, type: 3}
   WeaponFire: {fileID: 4214144353036093979}
   transformPoint: {fileID: 7951334042170267923}
   player: {fileID: 0}
-  namesGun: BMG
-  startMainReloadTime: 3
+  nameGun: BMG
+  startMainReloadTime: 1.2
   KSpeedPlayer: 0.7
   accuracy: 0
 --- !u!82 &2456831194934537479
@@ -441,7 +441,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -1781176353, guid: 8e9490c6fcd63b444b33afa0d4fd9605, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

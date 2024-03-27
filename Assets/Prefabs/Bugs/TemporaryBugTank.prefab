@@ -151,11 +151,12 @@ MonoBehaviour:
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: 4d9a21891dbd7054e996b95dc2885772, type: 3}
+    - {fileID: 8300000, guid: 1d370fc4d8434384fbc4010660a10c51, type: 3}
   - soundArray:
     - {fileID: 8300000, guid: b8b8bd1295f55cb498d4479dce481236, type: 3}
   - soundArray:
     - {fileID: 8300000, guid: 257e23b6794f8ac419561c64a1e146a8, type: 3}
-  volume: 0.08
+  volume: 0.25
   hp: {fileID: 2426511289095733360}
   speed: 0.5
   lives: 500
@@ -167,7 +168,7 @@ MonoBehaviour:
   damage: 60
   startTimeAttack: 1.1
   timeAttackAnimation: 1.1
-  timeLive: 16
+  timeLive: 14
   randomSpeedMove: 0
   isReplaced: 0
   isTemporary: 1
@@ -343,7 +344,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: e032b1766370f764f852c5d818f4f355, type: 3}
-  m_Color: {r: 0.5849056, g: 0.5655927, b: 0.5655927, a: 1}
+  m_Color: {r: 1, g: 0.8726415, b: 0.8726415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

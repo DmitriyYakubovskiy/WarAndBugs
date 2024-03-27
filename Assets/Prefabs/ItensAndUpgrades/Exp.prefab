@@ -113,8 +113,8 @@ MonoBehaviour:
   mixerGroup: {fileID: 8158984772937442721, guid: fc66cb29f3389774c84dd9f93fda896d, type: 2}
   sounds:
   - soundArray:
-    - {fileID: 8300000, guid: 53000759f4f54e746bc5da9ec40662c1, type: 3}
-  volume: 0.1
+    - {fileID: 8300000, guid: 9fe41d278bfaa2641be465eb56a11ee3, type: 3}
+  volume: 0.45
   speed: 5
 --- !u!82 &3017328598536742033
 AudioSource:

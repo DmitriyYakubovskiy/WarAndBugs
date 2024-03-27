@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5409783112367504529
 Transform:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3232346538332727684}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -140,8 +140,8 @@ MonoBehaviour:
   WeaponFire: {fileID: 243955561223871996}
   transformPoint: {fileID: 6121579546292792698}
   player: {fileID: 0}
-  namesGun: Gun
-  startMainReloadTime: 0.5
+  nameGun: Gun
+  startMainReloadTime: 0.45
   KSpeedPlayer: 1
   accuracy: 0
 --- !u!82 &8441453812112657733
@@ -344,7 +344,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 2145937086, guid: 44c1a0aff2b9b4f44963a46c11d8a999, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

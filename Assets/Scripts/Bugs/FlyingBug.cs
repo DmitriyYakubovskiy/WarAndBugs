@@ -17,7 +17,7 @@ public class FlyingBug : Bug
             RechargeTimeAttack();
             AiLogics();
         }
-        DistanceToPlayer();
+        PlayerPosition();
         Move(true);
         hp.ShowHealth(this);
     }

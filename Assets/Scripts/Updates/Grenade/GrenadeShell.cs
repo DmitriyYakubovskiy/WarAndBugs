@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrenadeShell : Sound
 {
-    [SerializeField] private GameObject BlowUpSprite;
+    [SerializeField] private GameObject BlowUp;
     [SerializeField] private float speed;
     [SerializeField] private float timeBlownUp;
     private List<Collider2D> collisions;
@@ -23,7 +23,6 @@ public class GrenadeShell : Sound
     private void Start()
     {
         gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(radius, radius);
-        BlowUpSprite.GetComponent<Transform>().localScale = new Vector2(radius, radius);
     }
 
     private void Update()
@@ -39,12 +38,14 @@ public class GrenadeShell : Sound
 
     private void ExplodeGrenade()
     {
-        BlowUpSprite.SetActive(true);
         foreach (var collision in collisions.ToList())
         {
             collision.gameObject.GetComponent<Entity>()?.TakeDamage(damage);
         }
-        isBlownUp=true;
+        isBlownUp = true;
+        var obj=Instantiate(BlowUp, transform.position, Quaternion.identity);
+        obj.GetComponent<Transform>().localScale = new Vector2(radius, radius);
+        Destroy(obj,timeBlownUp);
         PlaySound(0, volume, isDestroyed:true);
         Invoke("DisanableBlowUpSprite", timeBlownUp);
     }

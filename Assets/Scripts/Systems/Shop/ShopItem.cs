@@ -4,51 +4,52 @@ using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI moneyText;
-    [SerializeField] private GameObject buttonSelect;
-    [SerializeField] private GameObject buttonBuy;
-    [SerializeField] private BuySystem buySustem;
-    [SerializeField] private string namesItem;
-    [SerializeField] private int cost;
+    [SerializeField] protected TextMeshProUGUI moneyText;
+    [SerializeField] protected GameObject buttonSelect;
+    [SerializeField] protected GameObject buttonBuy;
+    [SerializeField] protected BuySystem buySustem;
+    [SerializeField] protected string selectedItemName = "selectedGun";
+    [SerializeField] protected string nameItem;
+    [SerializeField] protected int starterCost;
 
-    public string NamesItem { get => namesItem; set => namesItem = value; }
-    public int Cost { get => cost; set => cost = value;}
+    public string SelectedItemName => selectedItemName;
+    public string NameItem { get => nameItem; set { nameItem = value; } }
+    public int Cost { get; set; }
 
-    private void Awake()
+    protected virtual void Awake()
     {
+        Cost=starterCost;
         moneyText.text=Cost.ToString();
-        if (!PlayerPrefs.HasKey(namesItem)) if (namesItem == "Gun") Buy();
-        if (!PlayerPrefs.HasKey("selectedGun")) if (namesItem == "Gun") Select();
+        if (NameItem == "Gun") if (!PlayerPrefs.HasKey(NameItem)) Buy();
+        else if (!PlayerPrefs.HasKey(NameItem)) PlayerPrefs.SetInt(NameItem, 0);
+        if (!PlayerPrefs.HasKey(selectedItemName)) if (NameItem == "Gun") Select();
     }
 
-    public void Buy()
+    public virtual void SetButtonSelectInteractable(bool b)
+    {
+        buttonSelect.GetComponent<Button>().interactable = b;
+    }
+
+    public virtual void SetButtonBuyInteractable(bool b)
+    {
+        buttonBuy.GetComponent<Button>().interactable = b;
+    }
+
+    public virtual void Buy()
     {
         if (!PlayerPrefs.HasKey("money")) PlayerPrefs.SetInt("money", 0);
         int money = PlayerPrefs.GetInt("money");
         if (Cost <= money)
         {
             PlayerPrefs.SetInt("money", money - Cost);
-            PlayerPrefs.SetInt(namesItem, 1);
-            buttonBuy.GetComponent<Button>().interactable = false;
-            buttonSelect.GetComponent<Button>().interactable = true;
-            buySustem.UpdateButtonsAndMoney();
+            PlayerPrefs.SetInt(NameItem, 1);
+            buySustem.UpdateGunButtons();
         }
     }
 
-    public void Select()
+    public virtual void Select()
     {
-        if (PlayerPrefs.HasKey("selectedGun")) buySustem.SetButtonSelectInteractable(PlayerPrefs.GetString("selectedGun"),true);
-        SetButtonSelectInteractable(false);
-        PlayerPrefs.SetString("selectedGun", namesItem);
-    }
-
-    public void SetButtonSelectInteractable(bool b)
-    {
-        buttonSelect.GetComponent<Button>().interactable = b;
-    }
-
-    public void SetButtonBuyInteractable(bool b)
-    {
-        buttonBuy.GetComponent<Button>().interactable = b;
+        PlayerPrefs.SetString(selectedItemName, NameItem);
+        buySustem.UpdateGunButtons();
     }
 }

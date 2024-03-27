@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5977680028377868582}
+  - component: {fileID: 4415054603487377398}
   m_Layer: 0
   m_Name: MeteorRain
   m_TagString: Untagged
@@ -108,6 +109,102 @@ Transform:
   - {fileID: 4217220146817038106}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &4415054603487377398
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4027828437196893858}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 393d7d3dcd11a404ebd4855070ba5b08, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.07
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &126242922558089030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +256,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -222,6 +343,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -283,6 +428,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -346,6 +515,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -407,6 +600,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -470,6 +687,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -531,6 +772,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -594,6 +859,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -655,6 +944,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -718,6 +1031,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -779,6 +1116,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -842,6 +1203,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -903,6 +1288,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -966,6 +1375,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1027,6 +1460,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1090,6 +1547,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1151,6 +1632,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1214,6 +1719,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1275,6 +1804,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1338,6 +1891,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1399,6 +1976,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1462,6 +2063,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1523,6 +2148,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1586,6 +2235,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1647,6 +2320,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1710,6 +2407,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1771,6 +2492,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1834,6 +2579,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1895,6 +2664,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1958,6 +2751,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2019,6 +2836,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2082,6 +2923,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2143,6 +3008,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2206,6 +3095,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2267,6 +3180,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2330,6 +3267,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2391,6 +3352,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2454,6 +3439,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2515,6 +3524,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2578,6 +3611,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2639,6 +3696,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2702,6 +3783,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2763,6 +3868,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2826,6 +3955,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2887,6 +4040,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2950,6 +4127,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3011,6 +4212,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3074,6 +4299,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3135,6 +4384,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3198,6 +4471,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3259,6 +4556,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3322,6 +4643,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3383,6 +4728,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3446,6 +4815,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3507,6 +4900,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3570,6 +4987,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3631,6 +5072,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3694,6 +5159,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3755,6 +5244,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3818,6 +5331,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3879,6 +5416,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3942,6 +5503,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4003,6 +5588,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4066,6 +5675,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4127,6 +5760,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4190,6 +5847,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4251,6 +5932,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4314,6 +6019,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4375,6 +6104,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4438,6 +6191,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4499,6 +6276,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4562,6 +6363,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4623,6 +6448,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4686,6 +6535,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4747,6 +6620,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4810,6 +6707,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4871,6 +6792,30 @@ PrefabInstance:
     - target: {fileID: 3621797747045909541, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
       propertyPath: m_Name
       value: Meteor (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Pan2D
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: m_Pitch
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893761889819791921, guid: 3b482472d63b97e48ae366796a533c44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

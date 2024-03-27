@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739754353835428647}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.28100002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   WeaponFire: {fileID: 259546186635957854}
   transformPoint: {fileID: 6321191550719526230}
   player: {fileID: 0}
-  namesGun: SIX12
+  nameGun: SIX12
   startMainReloadTime: 3
   KSpeedPlayer: 1
   accuracy: 1
@@ -412,7 +412,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 1685682270, guid: 42c29db8d3506b745a29434eadbed53e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

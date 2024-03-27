@@ -168,12 +168,12 @@ MonoBehaviour:
   - soundArray:
     - {fileID: 8300000, guid: 0ed6a1d8cb032d949b0b9ea7a8ab69ee, type: 3}
   volume: 0.02
-  bullet: {fileID: 5104664226553926059, guid: bd2d54208b4fa2f48aa74fcb4e0ec809, type: 3}
+  bullet: {fileID: 5104664226553926059, guid: 30f099b6bcce63c40ac4925d0b1271f4, type: 3}
   WeaponFire: {fileID: 6808193433272315757}
   transformPoint: {fileID: 2694326587921330381}
   player: {fileID: 0}
-  namesGun: LMG
-  startMainReloadTime: 0.09
+  nameGun: LMG
+  startMainReloadTime: 0.08
   KSpeedPlayer: 0.9
   accuracy: 10
 --- !u!82 &1464153586385389813
@@ -344,7 +344,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -517131600, guid: 0f0f5080cccf1244c966c91fbb4cb12f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

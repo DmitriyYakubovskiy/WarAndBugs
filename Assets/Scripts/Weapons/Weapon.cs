@@ -6,7 +6,7 @@ public class Weapon : Sound
     [SerializeField] protected GameObject WeaponFire;
     [SerializeField] protected Transform transformPoint;
     [SerializeField] protected Player player;
-    [SerializeField] protected string namesGun;
+    [SerializeField] protected string nameGun;
     [SerializeField] protected float startMainReloadTime;
     [SerializeField] protected float KSpeedPlayer=1;
     [SerializeField] protected float accuracy=0;
@@ -18,13 +18,13 @@ public class Weapon : Sound
 
     protected virtual void Awake()
     {
-        if (!PlayerPrefs.HasKey(namesGun))
+        if (!PlayerPrefs.HasKey(nameGun))
         {
-            if (namesGun == "Gun") PlayerPrefs.SetInt(namesGun, 1);
-            else PlayerPrefs.SetInt(namesGun, 0);
+            if (nameGun == "Gun") PlayerPrefs.SetInt(nameGun, 1);
+            else PlayerPrefs.SetInt(nameGun, 0);
         }
         if (!PlayerPrefs.HasKey("selectedGun")) PlayerPrefs.SetString("selectedGun", "Gun");
-        if (PlayerPrefs.GetString("selectedGun") != namesGun) gameObject.SetActive(false);
+        if (PlayerPrefs.GetString("selectedGun") != nameGun) gameObject.SetActive(false);
         foreach (Transform child in transform.GetComponentsInChildren<Transform>())
         {
             if (child.gameObject.tag == "Sprite")
@@ -83,7 +83,7 @@ public class Weapon : Sound
             {
                 PlaySound(0, volume);
                 WeaponFire.SetActive(true);
-                Invoke("DisanabledWeaponFire", 0.1f);
+                Invoke("DisanabledWeaponFire", 0.1f<startMainReloadTime?0.1f:startMainReloadTime/2);
                 System.Random random = new System.Random();
                 float accuracyTmp=random.Next((int)(-accuracy*100),(int)(accuracy*100))/100;
                 var bulletTmp= Instantiate(bullet, transformPoint.position, Quaternion.Euler(new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - accuracyTmp)));

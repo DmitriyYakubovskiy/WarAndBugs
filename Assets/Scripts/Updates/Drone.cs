@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Drone : Sound
 {
@@ -10,6 +11,7 @@ public class Drone : Sound
     [SerializeField] private GameObject bullet;
     [SerializeField] private float startTimeAttack=0;
     [SerializeField] private float speed;
+    [SerializeField] private string nameDrone;
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody;
@@ -47,10 +49,10 @@ public class Drone : Sound
         }
         SearchPlayer();
         SearchBug();
-        if (PlayerPrefs.GetInt("Drone") == 0) gameObject.SetActive(false);
-        if (PlayerPrefs.HasKey("Drone"))
+        if (PlayerPrefs.GetInt(nameDrone) == 0 || (PlayerPrefs.GetString("selectedDrone") != nameDrone)) gameObject.SetActive(false);
+        if (PlayerPrefs.HasKey(nameDrone))
         {
-            int level = PlayerPrefs.GetInt("Drone");
+            int level = PlayerPrefs.GetInt(nameDrone);
             for (int i = 0; i < level; i++)
             {
                 startTimeAttack *= 0.75f;
@@ -59,7 +61,7 @@ public class Drone : Sound
         }
         else
         {
-            PlayerPrefs.SetInt("Drone", 0);
+            PlayerPrefs.SetInt(nameDrone, 0);
         }
     }
 
@@ -93,6 +95,7 @@ public class Drone : Sound
     private void MakeRotation()
     {
         if (currentBug == null) return;
+
         var dir = currentBug.transform.position - gunPoint.transform.position;
         float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         float rotationY = gunPoint.transform.eulerAngles.y;

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Ground
   - Exp
+  - SpawnSystem
   layers:
   - Default
   - TransparentFX

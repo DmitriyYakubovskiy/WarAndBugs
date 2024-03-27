@@ -98,7 +98,6 @@ public class Entity : Sound
     {
         IsFlip = flip;
         spriteRenderer.flipX = flip;
-
     }
 
     protected void SetAngles(bool flip)

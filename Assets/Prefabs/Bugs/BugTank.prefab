@@ -257,11 +257,12 @@ MonoBehaviour:
   sounds:
   - soundArray:
     - {fileID: 8300000, guid: 4d9a21891dbd7054e996b95dc2885772, type: 3}
+    - {fileID: 8300000, guid: 1d370fc4d8434384fbc4010660a10c51, type: 3}
   - soundArray:
     - {fileID: 8300000, guid: b8b8bd1295f55cb498d4479dce481236, type: 3}
   - soundArray:
     - {fileID: 8300000, guid: 257e23b6794f8ac419561c64a1e146a8, type: 3}
-  volume: 0.08
+  volume: 0.25
   hp: {fileID: 3967406298632817052}
   speed: 1.2
   lives: 350

@@ -26,7 +26,7 @@ public abstract class Bug : Entity
     protected bool randomMove = false;
 
     public const float MaxReplaceTime = 6;
-    public const float MaxDistanceToPlayer = 18;
+    public const float MaxDistanceToPlayer = 14;
 
     protected override void Awake()
     {
@@ -65,9 +65,11 @@ public abstract class Bug : Entity
         }
         else
         {
-            if (timeAttack > 0 && timeAttack < startTimeAttack + timeAttackAnimation && startTimeAttack + timeAttackAnimation - timeAttack < timeAttackAnimation)
+            if (timeAttack > 0 &&
+                timeAttack < startTimeAttack + timeAttackAnimation &&
+                startTimeAttack - timeAttack < 0)
             {
-                State = States.Attack;
+                State = States.Attack1;
             }
             else if (moveVector.x == 0 && moveVector.y == 0)
             {
@@ -110,6 +112,7 @@ public abstract class Bug : Entity
             }
             lives = 0;
             isDead = true;
+            SpawnSystem.aliveBugs -= 1;
             gameObject.GetComponent<Collider2D>().enabled = false;
             ResetDamageMaterial();
             PlaySound(2, volume);
@@ -132,7 +135,7 @@ public abstract class Bug : Entity
         }
     }
 
-    protected void DistanceToPlayer()
+    protected void PlayerPosition()
     {
         if (player != null)
         {
@@ -143,6 +146,11 @@ public abstract class Bug : Entity
                 timeSearchPlayer = startTimeSearchPlayer;
             }
         }
+    }
+
+    protected float DistanceToPlayer()
+    {
+        return Mathf.Sqrt(((playerPosition.x - transform.position.x) * (playerPosition.x - transform.position.x)) + ((playerPosition.y - transform.position.y) * (playerPosition.x - transform.position.y)));
     }
 
     protected virtual void AiLogics()
@@ -229,6 +237,14 @@ public abstract class Bug : Entity
             }
         }
     }
+
+    public void UpgradeCharacteristics(int level)
+    {
+        damage *= level;
+        lives *= level;
+        hp.MaxHealth=lives;
+    }
+
 
     public virtual void GetDamage()
     {

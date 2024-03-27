@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2255448964105788055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.981, y: 0.043, z: 0}
+  m_LocalPosition: {x: 1.08, y: 0.061, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -790695294, guid: e90c532403268a84481409e0a264c7a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 7023044380407962834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0.02, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0.001, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -239,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4698633600267195818
 Transform:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8847342462607786411}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.28100002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -274,14 +274,14 @@ MonoBehaviour:
   - soundArray:
     - {fileID: 8300000, guid: a3189d12d6b475f4da663cece8a20c5e, type: 3}
   volume: 0.1
-  bullet: {fileID: 6891818323524720526, guid: e4d9755c0272bd24c983b05565e638f5, type: 3}
+  bullet: {fileID: 5338575282875281971, guid: 9214a169cb73900438e0a62029c87b15, type: 3}
   WeaponFire: {fileID: 7023044380407962834}
   transformPoint: {fileID: 3843163121936879578}
   player: {fileID: 0}
-  namesGun: Arc
+  nameGun: Arc
   startMainReloadTime: 4
   KSpeedPlayer: 1
-  accuracy: 1
+  accuracy: 5
   startTimeAttack: 2
   delay: 0.01
 --- !u!82 &8724900356699569102

@@ -20,7 +20,7 @@ public class ShotingBug : Bug
             RechargeTimeAttack();
             AiLogics();
         }
-        DistanceToPlayer();
+        PlayerPosition();
         MakeRotation();
         Move(true);
         hp.ShowHealth(this);

@@ -160,13 +160,13 @@ MonoBehaviour:
   volume: 0.08
   hp: {fileID: 7951460507042110873}
   speed: 5.5
-  lives: 10
+  lives: 3
   timeDeadAnimation: 1.4
   isDead: 0
   expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
   money: 1
   exp: 4
-  damage: 15
+  damage: 11
   startTimeAttack: 0.6
   timeAttackAnimation: 0.6
   timeLive: 20

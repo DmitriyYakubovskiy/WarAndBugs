@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -8,7 +7,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected GameObject bloodSplash;
     [SerializeField] protected string[] tags;
     [SerializeField] protected float timeDieBullet=2;
-    
+    [SerializeField] private int penetration=1;
+
     public float speed;
     public float damage;
 
@@ -33,7 +33,8 @@ public class Bullet : MonoBehaviour
             if (Array.IndexOf(tags,collision.gameObject.tag)!=-1)
             {
                 collision.gameObject.GetComponent<Entity>().TakeDamage(damage);
-                Destroy(gameObject);
+                penetration -= 1;
+                if(penetration<=0) Destroy(gameObject);
             }
             if (collision.gameObject.tag == "Ground")
             {
