@@ -3,13 +3,18 @@ using UnityEngine;
 public class Grenade : Sound
 {
     [SerializeField] private GameObject granageShell;
+    [SerializeField] private GameObject grenadeImage;
     [SerializeField] private Transform transformPoint;
     [SerializeField] private float damage;
     [SerializeField] private float radius;
 
     private void Awake()
     {
-        if (PlayerPrefs.GetInt("Grenade") == 0) gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("Grenade") == 0)
+        {
+            gameObject.SetActive(false);
+            grenadeImage.SetActive(false);
+        }
         if (PlayerPrefs.HasKey("Grenade"))
         {
             int level = PlayerPrefs.GetInt("Grenade");
@@ -32,6 +37,12 @@ public class Grenade : Sound
             MakeRotation();
             Attack();
         }
+    }
+
+    public void GrenadeSetActive(bool active)
+    {
+        gameObject.SetActive(true);
+        grenadeImage.SetActive(true);
     }
 
     protected virtual void MakeRotation()
@@ -70,6 +81,7 @@ public class Grenade : Sound
             objectGrenage.GetComponent<GrenadeShell>().radius = radius;
             objectGrenage.SetActive(true);
             gameObject.SetActive(false);  
+            grenadeImage.SetActive(false);
         }
     }
 }

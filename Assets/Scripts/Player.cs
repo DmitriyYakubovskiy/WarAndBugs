@@ -7,7 +7,7 @@ public class Player : Entity
     [SerializeField] private ResultPanel resultPanel;
     [SerializeField] private GameObject improvementSystem;
     [SerializeField] private GameObject diePanel;
-    [SerializeField] private GameObject grenade;
+    [SerializeField] private Grenade grenade;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private ExpBar expBar;
     [SerializeField] private MoneyView moneyView;
@@ -56,7 +56,7 @@ public class Player : Entity
 
     public void GrenadeSetActive(bool b)
     {
-        grenade.SetActive(b);
+        grenade.GrenadeSetActive(b);
     }
 
     public bool GrenadeGetActive()

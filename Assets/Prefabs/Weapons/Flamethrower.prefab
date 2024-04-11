@@ -173,10 +173,10 @@ MonoBehaviour:
   transformPoint: {fileID: 7159802273400116280}
   player: {fileID: 0}
   nameGun: Flamethrower
-  startMainReloadTime: 1
-  KSpeedPlayer: 1
+  startMainReloadTime: 3
+  KSpeedPlayer: 1.1
   accuracy: 30
-  startTimeAttack: 1
+  startTimeAttack: 2
   delay: 0.04
 --- !u!82 &1647898497161939433
 AudioSource:

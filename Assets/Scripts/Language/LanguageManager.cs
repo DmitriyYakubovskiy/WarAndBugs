@@ -37,7 +37,8 @@ public class LanguageManager : MonoBehaviour
         {"Audio", "Аудио" },
         {"Language", "Язык"},
         {"Max Level", "Макс. Урв."},
-        {"LVL: 1", "УРВ: 1"}
+        {"LVL: 1", "УРВ: 1"},
+        {"Music", "Музыка"}
     };
 
     private TextMeshProUGUI[] texts;

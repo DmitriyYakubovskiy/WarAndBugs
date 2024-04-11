@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class FlyingBug : Bug
 {
     private void Update()

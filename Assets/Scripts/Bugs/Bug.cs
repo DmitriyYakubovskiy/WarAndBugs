@@ -127,9 +127,9 @@ public abstract class Bug : Entity
     protected void Reposition()
     {
         replaceTime += Time.deltaTime;
-        if (replaceTime > startLiveTime && Vector3.Distance(playerPosition, gameObject.transform.position) > MaxDistanceToPlayer)
+        if (replaceTime > startLiveTime && Vector3.Distance(playerPosition, gameObject.transform.position) > MaxDistanceToPlayer && player!=null)
         {
-            gameObject.transform.position = SpawnSystem.GetNewPosition();
+            gameObject.transform.position = SpawnSystem.GetNewPosition(player.GetComponent<Player>());
             previousPosition = rigidbody.position;
             replaceTime = 0;
         }
@@ -238,13 +238,12 @@ public abstract class Bug : Entity
         }
     }
 
-    public void UpgradeCharacteristics(int level)
+    public virtual void UpgradeCharacteristics(int level)
     {
         damage *= level;
         lives *= level;
         hp.MaxHealth=lives;
     }
-
 
     public virtual void GetDamage()
     {

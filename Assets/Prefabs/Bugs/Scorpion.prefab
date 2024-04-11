@@ -302,7 +302,7 @@ MonoBehaviour:
   expGameObject: {fileID: 2721116932248743801, guid: 2717c8b5569dfb74f871298b0d3f22ed, type: 3}
   money: 10
   exp: 90
-  damage: 0
+  damage: 30
   startTimeAttack: 2
   timeAttackAnimation: 1.1
   timeLive: 0
@@ -422,11 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683276036273201471, guid: 74f69d25fba359a46b84a73525f2614b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.013
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 683276036273201471, guid: 74f69d25fba359a46b84a73525f2614b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 683276036273201471, guid: 74f69d25fba359a46b84a73525f2614b, type: 3}
       propertyPath: m_AnchoredPosition.y

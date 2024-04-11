@@ -23,7 +23,7 @@ public class Item : Sound
         liveTime += Time.deltaTime;
         if (liveTime > MaxLifeTime && Vector3.Distance(player.transform.position, gameObject.transform.position) > MaxDistanceToPlayer)
         {
-            gameObject.transform.position = SpawnSystem.GetNewPosition();
+            gameObject.transform.position = SpawnSystem.GetNewPosition(player);
             liveTime = 0;
         }
     }

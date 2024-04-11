@@ -29,6 +29,7 @@ public class ShotingBug : Bug
     public override void GetDamage()
     {
         bullet.GetComponent<Bullet>().TimeDieBullet = 6;
+        bullet.GetComponent<Bullet>().damage=damage;
         Instantiate(bullet, transformPoint.transform.position, transformPoint.transform.rotation);
         System.Random random = new System.Random();
         randomMoveTime = random.Next(10, (int)startTimeAttack * 95)/100;
