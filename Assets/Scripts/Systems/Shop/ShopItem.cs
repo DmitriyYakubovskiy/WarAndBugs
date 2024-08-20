@@ -18,11 +18,11 @@ public class ShopItem : MonoBehaviour
 
     protected virtual void Awake()
     {
-        Cost=starterCost;
-        moneyText.text=Cost.ToString();
         if (NameItem == "Gun") if (!PlayerPrefs.HasKey(NameItem)) Buy();
         else if (!PlayerPrefs.HasKey(NameItem)) PlayerPrefs.SetInt(NameItem, 0);
         if (!PlayerPrefs.HasKey(selectedItemName)) if (NameItem == "Gun") Select();
+        Cost = starterCost;
+        moneyText.text = Cost.ToString();
     }
 
     public virtual void SetButtonSelectInteractable(bool b)

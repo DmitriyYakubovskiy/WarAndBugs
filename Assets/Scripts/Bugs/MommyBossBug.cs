@@ -15,17 +15,15 @@ public class MommyBossBug : Bug
     private float timeSpawn=0;
     private Dictionary<int, float> startTimeAttacks;
     private Dictionary<int, float> timeAnimations;
-    
 
-
-    protected virtual void Awake()
+    protected override void Start()
     {
-        base.Awake();
+        base.Start();
         if (GameObject.Find("SpawnSystem") != null)
         {
             spawnSystem = GameObject.Find("SpawnSystem");
         }
-        startTimeAttacks = new Dictionary<int, float>();    
+        startTimeAttacks = new Dictionary<int, float>();
         startTimeAttacks.Add(0, startTimeAttack);
         startTimeAttacks.Add(1, startTimeMegaAttack);
         startTimeAttacks.Add(2, startTimeDownAttack);

@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Scenes : MonoBehaviour
 {
-    public static int m_indexScene;
-
     public void ChangeScenes(int numberScenes)
     {
         SceneManager.LoadScene(numberScenes);
@@ -12,13 +10,21 @@ public class Scenes : MonoBehaviour
 
     public void RestartScene()
     {
-        m_indexScene = (SceneManager.GetActiveScene().buildIndex);
-        ChangeScenes(0);
+        ChangeScenes(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NextScene()
     {
-        m_indexScene = (SceneManager.GetActiveScene().buildIndex)+1;
-        ChangeScenes(0);
+        ChangeScenes((SceneManager.GetActiveScene().buildIndex) + 1);
+    }
+
+    public static void ChangeScene(int numberScenes)
+    {
+        SceneManager.LoadScene(numberScenes);
+    }
+
+    public static void Restart()
+    {
+        ChangeScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

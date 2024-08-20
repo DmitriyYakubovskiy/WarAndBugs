@@ -18,10 +18,10 @@ public class GrenadeShell : Sound
     private void Awake()
     {
         collisions = new List<Collider2D>();
-        targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     private void Start()
     {
+        targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(radius, radius);
     }
 

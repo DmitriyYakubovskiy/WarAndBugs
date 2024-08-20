@@ -47,8 +47,6 @@ public class Drone : Sound
                 break;
             }
         }
-        SearchPlayer();
-        SearchBug();
         if (PlayerPrefs.GetInt(nameDrone) == 0 || (PlayerPrefs.GetString("selectedDrone") != nameDrone)) gameObject.SetActive(false);
         if (PlayerPrefs.HasKey(nameDrone))
         {
@@ -63,6 +61,12 @@ public class Drone : Sound
         {
             PlayerPrefs.SetInt(nameDrone, 0);
         }
+    }
+
+    private void Start()
+    {
+        SearchPlayer();
+        SearchBug();
     }
 
     private void Update()

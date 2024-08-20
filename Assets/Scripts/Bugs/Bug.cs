@@ -41,6 +41,13 @@ public abstract class Bug : Entity
                 break;
             }
         }
+        materialHeal = Resources.Load("Materials/HealBlink", typeof(Material)) as Material;
+        materialDamage = Resources.Load("Materials/DamageBlink", typeof(Material)) as Material;
+        materialDefault = spriteRenderer.material;
+    }
+
+    protected virtual void Start()
+    {
         if (GameObject.Find("Player") != null)
         {
             player = GameObject.Find("Player");
@@ -51,9 +58,6 @@ public abstract class Bug : Entity
         startLiveTime = random.Next(2, (int)MaxReplaceTime);
         startSpeed = speed;
         if (randomSpeedMove) speed = (random.Next((int)((speed - speed / 4) * 100), (int)((speed + speed / 4) * 100))) / 100f;//+-25%
-        materialHeal = Resources.Load("Materials/HealBlink", typeof(Material)) as Material;
-        materialDamage = Resources.Load("Materials/DamageBlink", typeof(Material)) as Material;
-        materialDefault = spriteRenderer.material;
     }
 
     protected virtual void FixedUpdate()

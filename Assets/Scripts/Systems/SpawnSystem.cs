@@ -35,7 +35,7 @@ public class SpawnSystem : MonoBehaviour
     public static int aliveBugs=0;
     public static int levelBugs=1;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
         RangeTop = rangeTop;
