@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -56,9 +57,19 @@ public class Player : Entity
     public float KSpeed { get; set; } = 1;
     public float KSpeedFromWeapon { get; set; } = 1;
 
-    public void GrenadeSetActive(bool b)
+    public void AddGrenade()
     {
-        grenade.GrenadeSetActive(b);
+        grenade.GrenadeSetActive(true);
+    }
+
+    public int GetCountGrenade()
+    {
+        return grenade.Count;
+    }
+
+    public int GetMaxCountGrenade()
+    {
+        return grenade.MaxCount;
     }
 
     public bool GrenadeGetActive()
@@ -66,9 +77,10 @@ public class Player : Entity
         return grenade.gameObject.activeSelf;
     }
 
-    private void Start()
+    protected override void Start()
     {
-        currentLanguage=LanguageManager.curretLanguage;
+        base.Start();
+        currentLanguage=LanguageManager.currentLanguage;
         hp.MaxHealth=Lives;
     }
 
@@ -92,7 +104,7 @@ public class Player : Entity
             if (Animator.speed == 0) State = States.Idle;
             else State = States.Run;
         }
-        previousPosition = rigidbody.position;
+        previousPosition = entityRigidbody.position;
     }
 
     private float timeMove;
@@ -109,7 +121,7 @@ public class Player : Entity
 
     protected override void Move(bool b)
     {
-        var dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        var dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - entityTransform.position;
         if (moveVector.x > dir.x && b == false) SetFlip(true);
         else if (moveVector.x < dir.x && b == false) SetFlip(false);
         if (moveVector.x > dir.x && b == true) SetAngles(true);
@@ -117,7 +129,7 @@ public class Player : Entity
 
         moveVector = moveVector.normalized;
         moveVector = moveVector * (speed * KSpeed * KSpeedFromWeapon);
-        rigidbody.velocity = moveVector;
+        entityRigidbody.velocity = moveVector;
         if(moveVector.x != 0 || moveVector.y!=0) 
         {
             //PlaySoundMove();
@@ -126,13 +138,16 @@ public class Player : Entity
 
     private void OnDestroy()
     {
-        if (PlayerPrefs.HasKey("money"))
+        try
         {
-            Money += PlayerPrefs.GetInt("money");
+            SaveSystem.Data.money += Money;
+            resultPanel.levelText.text = LanguageManager.TranslateText("Level: ") + Level;
+            resultPanel.killsText.text = LanguageManager.TranslateText("Kills: ") + Kills;
+            if(!diePanel.gameObject.IsDestroyed()) diePanel.SetActive(true);
         }
-        PlayerPrefs.SetInt("money", Money);
-        resultPanel.levelText.text = LanguageManager.TranslateText("Level: ") + Level;
-        resultPanel.killsText.text = LanguageManager.TranslateText("Kills: ") + Kills;
-        if(!diePanel.gameObject.IsDestroyed()) diePanel?.SetActive(true);
+        catch(Exception ex)
+        {
+            Debug.Log(ex.Message);
+        }
     }
 }

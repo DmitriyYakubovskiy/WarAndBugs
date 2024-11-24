@@ -156,6 +156,9 @@ MonoBehaviour:
   bloodSplash: {fileID: 0}
   tags:
   - Player
+  - DestrItem
+  timeDieBullet: 2
+  penetration: 1
   speed: 8
   damage: 30
 --- !u!70 &3818650332679485251

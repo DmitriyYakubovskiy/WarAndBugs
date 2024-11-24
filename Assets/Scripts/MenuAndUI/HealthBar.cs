@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
 
     public float MaxHealth { get=>maxHealth; set => maxHealth = value; }
 
-    public void Awake()
+    public void Start()
     {
         fill = 1f;
     }

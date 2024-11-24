@@ -50,6 +50,7 @@ MonoBehaviour:
   bloodSplash: {fileID: 0}
   tags:
   - Player
+  - Enemy
   timeDieBullet: 30
   penetration: 1
   speed: 8

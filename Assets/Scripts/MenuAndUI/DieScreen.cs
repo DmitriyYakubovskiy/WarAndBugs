@@ -7,7 +7,7 @@ public class DieScreen : Sound
     private float defaultFov;
     private bool check = true;
 
-    private void Awake()
+    private void Start()
     {
         defaultFov = Camera.main.orthographicSize;
         diePanel=GetComponent<Transform>();

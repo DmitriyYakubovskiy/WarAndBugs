@@ -5,7 +5,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject settingsPanel;
 
-    private void Awake()
+    private void Start()
     {
         Pause.ContinueGame();
     }

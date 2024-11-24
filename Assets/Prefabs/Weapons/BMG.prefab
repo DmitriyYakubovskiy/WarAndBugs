@@ -53,6 +53,7 @@ MonoBehaviour:
   - soundArray:
     - {fileID: 8300000, guid: 70ffa6a84c7544245ab8d209f17d0ea6, type: 3}
   volume: 0.02
+  cursorTexture: {fileID: 2800000, guid: ad4c5fed261442f46a3516336016b1cf, type: 3}
   bullet: {fileID: 929550092267090712, guid: fe97461d2b3aec940b634b77e22efa63, type: 3}
   WeaponFire: {fileID: 4214144353036093979}
   transformPoint: {fileID: 7951334042170267923}

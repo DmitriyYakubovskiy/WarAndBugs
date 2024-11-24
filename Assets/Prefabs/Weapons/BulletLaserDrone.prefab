@@ -169,6 +169,8 @@ MonoBehaviour:
   bloodSplash: {fileID: 0}
   tags:
   - Enemy
+  - DestrItem
   timeDieBullet: 2
+  penetration: 1
   speed: 30
   damage: 6

@@ -11,10 +11,14 @@ public class MoneyView : MonoBehaviour
 
     private void View()
     {
-        if (player.IsDestroyed()) return;
+        if (player.IsDestroyed())
+        {
+            moneyText.text = money.ToString();
+            return;
+        }
         if (index < money - 1)
         {
-            if(!this.IsDestroyed()) Invoke("View", 0.1f);
+            if(!this.IsDestroyed()) Invoke("View", 0.05f);
         }
         if (index == money)
         {
@@ -29,8 +33,7 @@ public class MoneyView : MonoBehaviour
 
     public void UpdateFromMemory()
     {
-        if (PlayerPrefs.HasKey("money")) moneyText.text = PlayerPrefs.GetInt("money").ToString();
-        else moneyText.text=0.ToString();   
+        moneyText.text=SaveSystem.Data.money.ToString();
     }
 
     public void UpdateMoney(int money)
