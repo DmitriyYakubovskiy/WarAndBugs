@@ -12,6 +12,9 @@ public class Player : Entity
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private ExpBar expBar;
     [SerializeField] private MoneyView moneyView;
+    [SerializeField] private float startTimeMove;
+
+    private float timeMove;
     private int money = 0;
     private int level = 1;
     private float exp;
@@ -107,8 +110,6 @@ public class Player : Entity
         previousPosition = entityRigidbody.position;
     }
 
-    private float timeMove;
-    [SerializeField] private float startTimeMove;
     private void PlaySoundMove(int index)
     {
         timeMove-=Time.deltaTime;

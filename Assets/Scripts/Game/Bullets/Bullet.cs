@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : Sound
 {
     [SerializeField] protected GameObject damageEffect;
     [SerializeField] protected GameObject bloodSplash;
@@ -26,15 +26,20 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.right*speed*Time.deltaTime);
     }
 
+    protected virtual void DealDamage(Collider2D collision)
+    {
+        collision.gameObject.GetComponent<Entity>().TakeDamage(damage);
+        penetration -= 1;
+        if (penetration <= 0) Destroy(gameObject);
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.isTrigger == false || collision.layerOverridePriority==1)
         {
             if (Array.IndexOf(tags,collision.gameObject.tag)!=-1)
             {
-                collision.gameObject.GetComponent<Entity>().TakeDamage(damage);
-                penetration -= 1;
-                if(penetration<=0) Destroy(gameObject);
+                DealDamage(collision);
             }
             if (collision.gameObject.tag == "Ground")
             {

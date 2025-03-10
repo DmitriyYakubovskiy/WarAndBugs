@@ -20,7 +20,9 @@ public class CoefficientOfDifficulty : MonoBehaviour
         value += stepTmp;
         if (value > 10) value = 10;
         text.text = Math.Round(value,1).ToString();
-        SaveSystem.Data.coefficientOfDifficulty = (float)Math.Round(value, 1);
+        var resultValue = (float)Math.Round(value, 1);
+        if(resultValue<1) resultValue = 1;
+        SaveSystem.Data.coefficientOfDifficulty = resultValue;
     }
 
     public void Down()

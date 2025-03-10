@@ -20,6 +20,7 @@ public partial class SaveData
         {"SIX12", 0 },
         {"Vector", 0 },
         {"LMG", 0 },
+        {"GrenadeLauncher", 0},
         {"AKLONG", 0 },
         {"BMG", 0 },
         {"Arc", 0 },
@@ -91,6 +92,10 @@ public class SaveSystem : MonoBehaviour
     private void Load()
     {
         Data = service.Load();
+        if (!Data.ShopItemNames.ContainsKey("GrenadeLauncher"))
+        {
+            Data.ShopItemNames.Add("GrenadeLauncher", 0);
+        }
     }
 
     private void OnDestroy()

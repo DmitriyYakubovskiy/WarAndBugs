@@ -44,10 +44,10 @@ public class GrenadeShell : Sound
         obj.GetComponent<Transform>().localScale = new Vector2(radius, radius);
         Destroy(obj,timeBlownUp);
         PlaySound(0, volume*3, isDestroyed:true);
-        Invoke("DisanableBlowUpSprite", timeBlownUp);
+        Invoke("DisenableBlowUp", timeBlownUp);
     }
 
-    private void DisanableBlowUpSprite()
+    private void DisenableBlowUp()
     {
         Destroy(gameObject);
     }
