@@ -19,11 +19,13 @@ public class SpawnSystem : MonoBehaviour
     private float timeHealth = 0f;
     private float timeLeftHealthMax = 0f;
     private float timeLeftGrenade = 0f;
+    private float timeLeftCoin = 0f;
     private float timeEvents=0f;
     private float startTimeLeftHealth=60;
     private float startTimeLeftHealthMax = 125;
     private float startTimeLeftGrenade = 50;
     private float startTimeEvents = 70;
+    private float startTimeLeftCoin = 50;
 
     private static int range = 25;
     private static int distanseToPlayer = 20;
@@ -61,6 +63,7 @@ public class SpawnSystem : MonoBehaviour
         timeHealth += Time.deltaTime;
         timeLeftHealthMax += Time.deltaTime;
         timeLeftGrenade += Time.deltaTime;
+        timeLeftCoin+=Time.deltaTime;
         timeEvents += Time.deltaTime;
         timeBoss += Time.deltaTime;
         if (Mathf.FloorToInt(timeHealth / startTimeLeftHealth) == 1)
@@ -77,11 +80,17 @@ public class SpawnSystem : MonoBehaviour
             startTimeLeftHealthMax = Random.Range(100, 150);
             timeLeftHealthMax = 0;
         }
-        if (Mathf.FloorToInt(timeLeftGrenade / startTimeLeftGrenade) == 1 && SaveSystem.Data.ShopItemNames["Grenade"] !=0)
+        if (Mathf.FloorToInt(timeLeftGrenade / startTimeLeftGrenade) == 1 && SaveSystem.Data.ShopItemNames["Grenade"] != 0)
         {
             SpawnEntity(aiEntity[2]);
             startTimeLeftGrenade = Random.Range(45, 55);
             timeLeftGrenade = 0;
+        }
+        if (Mathf.FloorToInt(timeLeftCoin / startTimeLeftCoin) == 1)
+        {
+            SpawnEntity(aiEntity[7]);
+            startTimeLeftCoin = Random.Range(45, 55);
+            timeLeftCoin = 0;
         }
         if (Mathf.FloorToInt(timeBoss / 600) >= 1 && player.Level>30 && IsBossStage == false)
         {
