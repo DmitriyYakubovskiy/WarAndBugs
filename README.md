@@ -109,3 +109,6 @@
 %USERPROFILE%\AppData\LocalLow\TuckaStudio\SpaceBugsSurvivors\saves.fun
 ```
 
+## Лицензия
+
+Проект распространяется по лицензии, указанной в файле `LICENSE`.
